@@ -8,17 +8,7 @@ includes:
   - templates/**
   - integrations/**
   - company.example.json
-description: |
-  Compta société : PCG, TVA, IS, FEC, liasse, facturation.
-  Écritures PCG, déclarations TVA, IS/IR, clôture annuelle, liasse fiscale
-  (2033/2065), états financiers, facturation (mentions obligatoires,
-  numérotation, Factur-X, réforme 2026, PDP/PA, e-reporting).
-  Triggers: comptabilité, TVA, bilan, compte de résultat, amortissement,
-  clôture, facture, avoir, liasse, 2065, 2033, e-invoicing.
-  Routage : urgence de déclaration avec banque ou preuve de dépôt →
-  tax-filing-operations. IR personnel → fiscaliste. Simulation de contrôle →
-  controleur-fiscal. Accès bancaire : TOUJOURS via la chaine bancaire gouvernee,
-  en brouillons uniquement, jamais via les scripts d'intégration paperasse.
+description: "Compta société : PCG, TVA, IS, FEC, liasse, facturation. Écritures PCG, déclarations TVA, IS/IR, clôture annuelle, liasse fiscale (2033/2065), états financiers, facturation (mentions obligatoires, numérotation, Factur-X, réforme 2026, PDP/PA, e-reporting). Triggers: comptabilité, TVA, bilan, compte de résultat, amortissement, clôture, facture, avoir, liasse, 2065, 2033, e-invoicing. Routage : urgence de déclaration avec banque ou preuve de dépôt → tax-filing-operations. IR personnel → fiscaliste. Simulation de contrôle → controleur-fiscal. Accès bancaire : TOUJOURS via la chaine bancaire gouvernee, en brouillons uniquement, jamais via les scripts d'intégration paperasse."
 ---
 
 # Expert-Comptable IA

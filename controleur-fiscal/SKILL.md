@@ -5,14 +5,7 @@ metadata:
 includes:
   - data/**
   - company.example.json
-description: |
-  Simuler un contrôle fiscal DGFIP et chiffrer les redressements.
-  Analyse FEC, liasse, charges déduites, compte courant d'associé, TVA, IS
-  selon 8 axes ; chefs de redressement avec montants, base légale et risque.
-  Triggers: contrôle fiscal, redressement, vérification comptabilité, DGFIP,
-  FEC, déductibilité.
-  Routage : contre-audit des montages proposés par tax_optimization ;
-  la tenue des comptes elle-même → comptable.
+description: "Simuler un contrôle fiscal DGFIP et chiffrer les redressements. Analyse FEC, liasse, charges déduites, compte courant d'associé, TVA, IS selon 8 axes ; chefs de redressement avec montants, base légale et risque. Triggers: contrôle fiscal, redressement, vérification comptabilité, DGFIP, FEC, déductibilité. Routage : contre-audit des montages proposés par tax_optimization ; la tenue des comptes elle-même → comptable."
 ---
 
 # Simulation de Contrôle Fiscal DGFIP

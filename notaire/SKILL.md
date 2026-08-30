@@ -5,15 +5,7 @@ metadata:
 includes:
   - scripts/fetch_notaire_data.py
   - scripts/test_fetch_notaire_data.py
-description: |
-  Chiffrer un acte notarié : achat immo, succession, donation, SCI.
-  Frais de notaire (DMTO, émoluments, débours, CSI), plus-value immobilière,
-  droits de succession et donation, démembrement, contrats de mariage, PACS,
-  projets d'actes (compromis, statuts, testaments).
-  Triggers: notaire, frais de notaire, compromis, succession, donation,
-  testament, usufruit, nue-propriété, plus-value immobilière, DMTO, viager.
-  Routage : rentabilité et gestion des lots → real_estate_audit et
-  lot_management ; fiscalité IR des revenus fonciers → fiscaliste.
+description: "Chiffrer un acte notarié : achat immo, succession, donation, SCI. Frais de notaire (DMTO, émoluments, débours, CSI), plus-value immobilière, droits de succession et donation, démembrement, contrats de mariage, PACS, projets d'actes (compromis, statuts, testaments). Triggers: notaire, frais de notaire, compromis, succession, donation, testament, usufruit, nue-propriété, plus-value immobilière, DMTO, viager. Routage : rentabilité et gestion des lots → real_estate_audit et lot_management ; fiscalité IR des revenus fonciers → fiscaliste."
 ---
 
 # Notaire IA

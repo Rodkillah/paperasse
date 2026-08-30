@@ -9,7 +9,7 @@ includes:
   - integrations/**
   - company.example.json
 description: |
-  Tenir la compta d'une société française : PCG, TVA, IS, FEC, liasse.
+  Compta société : PCG, TVA, IS, FEC, liasse, facturation.
   Écritures PCG, déclarations TVA, IS/IR, clôture annuelle, liasse fiscale
   (2033/2065), états financiers, facturation (mentions obligatoires,
   numérotation, Factur-X, réforme 2026, PDP/PA, e-reporting).

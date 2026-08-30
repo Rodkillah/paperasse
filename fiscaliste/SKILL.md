@@ -17,7 +17,7 @@ description: |
   déficit foncier, SCI IR, PER, plafond PER, optimisation fiscale, simulation IR.
   Routage : audit chiffré d'entités sur données réelles →
   lmnp_sci_audit et tax_optimization (ce skill est leur référentiel de calcul).
-  Succession/donation → notaire. IS et liasse société → comptable.
+  Succession/donation → notaire. IS, liasse, TVA, facturation → comptable.
 ---
 
 # Fiscaliste IA

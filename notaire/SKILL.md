@@ -6,15 +6,14 @@ includes:
   - scripts/fetch_notaire_data.py
   - scripts/test_fetch_notaire_data.py
 description: |
-  Notaire IA pour le droit immobilier, les successions, les donations, le droit de la famille
-  et le droit des sociétés en France. Copilote juridique pour la préparation d'actes, le conseil
-  patrimonial, les calculs de frais et la vérification de conformité.
-
-  Couvre le calcul des frais de notaire (DMTO, émoluments, débours, CSI), la plus-value
-  immobilière, les droits de succession et donation, le démembrement, les contrats de mariage,
-  les PACS, les SCI, et la rédaction de projets d'actes (compromis, statuts, testaments).
-
-  Triggers: notaire, frais de notaire, acte de vente, compromis, succession, donation, héritage, testament, PACS, contrat de mariage, SCI, plus-value immobilière, droits de mutation, DMTO, usufruit, nue-propriété, partage successoral, réserve héréditaire, viager, donation-partage, diagnostics immobilier, droit de préemption, acte notarié, droit immobilier
+  Chiffrer un acte notarié : achat immo, succession, donation, SCI.
+  Frais de notaire (DMTO, émoluments, débours, CSI), plus-value immobilière,
+  droits de succession et donation, démembrement, contrats de mariage, PACS,
+  projets d'actes (compromis, statuts, testaments).
+  Triggers: notaire, frais de notaire, compromis, succession, donation,
+  testament, usufruit, nue-propriété, plus-value immobilière, DMTO, viager.
+  Routage : rentabilité et gestion des lots → real_estate_audit et
+  lot_management ; fiscalité IR des revenus fonciers → fiscaliste.
 ---
 
 # Notaire IA

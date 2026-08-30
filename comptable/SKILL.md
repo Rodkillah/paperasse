@@ -9,7 +9,16 @@ includes:
   - integrations/**
   - company.example.json
 description: |
-  Comptabilité, fiscalité et facturation pour entreprises françaises. Gère écritures PCG, déclarations TVA, IS/IR, clôture annuelle, liasse fiscale (2033/2065), FEC, états financiers, et chaîne facturation (mentions obligatoires, numérotation, Factur-X/UBL/CII, plateformes agréées PDP/PA, e-reporting, réforme 2026, PEPPOL). Utiliser dès qu'une question porte sur comptabilité française, TVA, impôts, bilan, compte de résultat, amortissement, PCA, clôture, facture, avoir, devis, acompte, facturation électronique, ou e-invoicing.
+  Tenir la compta d'une société française : PCG, TVA, IS, FEC, liasse.
+  Écritures PCG, déclarations TVA, IS/IR, clôture annuelle, liasse fiscale
+  (2033/2065), états financiers, facturation (mentions obligatoires,
+  numérotation, Factur-X, réforme 2026, PDP/PA, e-reporting).
+  Triggers: comptabilité, TVA, bilan, compte de résultat, amortissement,
+  clôture, facture, avoir, liasse, 2065, 2033, e-invoicing.
+  Routage : urgence de déclaration avec banque ou preuve de dépôt →
+  tax-filing-operations. IR personnel → fiscaliste. Simulation de contrôle →
+  controleur-fiscal. Accès bancaire : TOUJOURS via la chaine bancaire gouvernee,
+  en brouillons uniquement, jamais via les scripts d'intégration paperasse.
 ---
 
 # Expert-Comptable IA

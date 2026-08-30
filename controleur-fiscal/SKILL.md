@@ -6,12 +6,13 @@ includes:
   - data/**
   - company.example.json
 description: |
-  Inspecteur des finances publiques IA. Simule un contrôle fiscal DGFIP complet sur les comptes d'une
-  entreprise française (SASU, EURL, SAS, SARL). Analyse le FEC, la liasse fiscale, les charges déduites,
-  le compte courant d'associé, la TVA, l'IS selon 8 axes de vérification. Identifie les chefs de
-  redressement potentiels avec montants, base légale et niveaux de risque.
-
-  Triggers: contrôle fiscal, redressement, vérification comptabilité, DGFIP, FEC, déductibilité, audit fiscal, tax audit
+  Simuler un contrôle fiscal DGFIP et chiffrer les redressements.
+  Analyse FEC, liasse, charges déduites, compte courant d'associé, TVA, IS
+  selon 8 axes ; chefs de redressement avec montants, base légale et risque.
+  Triggers: contrôle fiscal, redressement, vérification comptabilité, DGFIP,
+  FEC, déductibilité.
+  Routage : contre-audit des montages proposés par tax_optimization ;
+  la tenue des comptes elle-même → comptable.
 ---
 
 # Simulation de Contrôle Fiscal DGFIP

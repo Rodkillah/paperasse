@@ -6,40 +6,42 @@ Voir `data/equity-salarial.json` pour les taux et seuils.
 
 **Terminologie** : "RSU" est le terme anglo-saxon ; "AGA" (Actions Gratuites d'Actions) est le terme juridique français (art. L. 225-197-1 C. com., art. 80 quaterdecies CGI). Les deux désignent le même dispositif : attribution d'actions gratuites aux salariés, avec période d'acquisition (vesting) puis détention éventuelle.
 
-### Deux événements fiscaux distincts
+### Deux événements fiscaux distincts, imposés la même année (celle de la cession)
 
-**1. Gain d'acquisition (au vesting)**
-- Valeur de l'action à la date d'acquisition
-- **Imposition : traitements et salaires** (case 1TT ou 1UT)
-- Au barème progressif de l'IR
-- Cotisations sociales : CSG/CRDS 9,7% + contribution salariale 10% (sur plans qualifiants, dans certains plafonds)
+Source : BOI-RSA-ES-20-20-20, version du 21/05/2026 (https://bofip.impots.gouv.fr/bofip/5654-PGP.html/identifiant=BOI-RSA-ES-20-20-20-20260521). Le régime dépend de la **date de la décision d'AGE** qui a autorisé l'attribution et du caractère **qualifiant** du plan (art. L. 225-197-1 et s. C. com.).
 
-**2. Plus-value de cession**
-- Valeur de cession − valeur au vesting
-- **Imposition : PV mobilière** : PFU à **31,4 % pour les cessions réalisées dès 2025** (12,8 % IR + 18,6 % PS, LFSS 2026), ou barème sur option
+**1. Gain d'acquisition** = valeur des actions à la date d'acquisition définitive (vesting)
+- Valeur retenue : premier cours coté du jour de l'attribution définitive (§ 120)
+- **Fait générateur : la cession** (ou disposition, conversion au porteur, mise en location), pas le vesting (art. 80 quaterdecies CGI ; § 150)
+- Une moins-value de cession (vente sous la valeur d'acquisition) s'impute sur le gain d'acquisition correspondant, dans la limite de ce montant (§ 190)
+
+**2. Plus-value de cession** = prix de cession − valeur à la date d'acquisition définitive
+- **PV mobilière** (§ 170) : PFU à **31,4 % pour les cessions réalisées dès 2025** (12,8 % IR + 18,6 % PS, LFSS 2026), ou barème sur option globale
 - Les PV mobilières sont des "revenus du patrimoine" (art. L. 136-6 CSS), donc soumises au taux PS 18,6 % dès les revenus 2025
-- Uniquement si cession après vesting
 
-### Plans qualifiants (loi Macron)
+### Régime du gain d'acquisition selon la date de l'AGE
 
-Régime de faveur pour la fraction ≤ plafonds (variables selon les plans) :
-- Imposition comme PV mobilière au PFU (pas comme salaire)
-- Abattement 50% possible sur une fraction
+| Décision d'AGE | Fraction annuelle ≤ 300 000 € | Fraction > 300 000 € |
+|---|---|---|
+| **Après le 31/12/2017** (LF 2018 art. 28, régime courant) | Barème **après abattement de 50 %** (art. 200 A, 3 CGI), le cas échéant abattement fixe 150-0 D ter ; **PS revenus du patrimoine** sans abattement (L. 136-6, I-e CSS) ; **pas de contribution salariale** (§ 45 et 50) | Traitements et salaires : barème sans abattement, PS sur revenus d'activité, **contribution salariale 10 %** (L. 137-14 CSS) |
+| Du 31/12/2016 au 31/12/2017 | Même limite de 300 000 € (§ 44) | Salaire |
+| Du 08/08/2015 au 30/12/2016 (loi Macron) | PS revenus du patrimoine, contribution salariale supprimée (§ 48) | sans objet |
 
-Au-delà des plafonds : régime de droit commun (salaire).
+La limite de 300 000 € est annuelle, non reportable, et s'apprécie en faisant masse des gains d'acquisition des actions cédées la même année.
 
-### Piège classique
+**Plans non qualifiants** : le gain d'acquisition est un complément de salaire de droit commun, imposé l'année de l'acquisition définitive.
 
-**Traiter le gain RSU comme une PV mobilière classique** → erreur majeure. Le gain au vesting est d'abord :
-1. Salaire (barème)
-2. Soumis à CSG 9,7%
-3. Soumis à contribution salariale 10% (plans qualifiants)
+### Pièges classiques
 
-Seule la plus-value ultérieure (valeur vesting → cession) est PV mobilière.
+Deux erreurs symétriques :
+1. **Traiter le gain d'acquisition d'un plan qualifiant comme un salaire** (CSG d'activité, contribution 10 %) : faux sous 300 000 € pour une AGE postérieure à 2017.
+2. **Le traiter comme une simple PV mobilière au PFU** : faux, il est au barème après abattement de 50 %, avec PS patrimoine, l'année de la cession.
+
+Seule la plus-value ultérieure (valeur au vesting → cession) est une PV mobilière.
 
 ### Stratégie : quotient pour revenus exceptionnels
 
-Un vesting massif (ex: 150 000 € en une seule année) fait franchir plusieurs tranches. Le **quotient pour revenus exceptionnels** (coefficient 4) peut lisser l'imposition.
+Une cession massive d'actions gratuites (ex: 150 000 € de gain d'acquisition imposable la même année) fait franchir plusieurs tranches. Le **quotient pour revenus exceptionnels** (coefficient 4) peut lisser l'imposition.
 
 Mécanisme : impôt = [IR(RNI_hors_RSU + vesting/4) − IR(RNI_hors_RSU)] × 4. Utile si le vesting seul fait franchir une tranche. **Nuance** : inutile si le foyer est déjà au TMI 45% — le taux marginal ne change pas avec la division. Détail et exemples chiffrés dans la section cas-speciaux listée depuis SKILL.md.
 
@@ -108,7 +110,7 @@ Enveloppe collective distincte du PER individuel.
 - **Abondement employeur** : exonéré IR et PS dans les plafonds — **AVANTAGE MAJEUR**
 - **Plafond abondement** : ~3 709 € par bénéficiaire (8% PASS — vérifier annuellement)
 - **Blocage** : 5 ans sauf cas de déblocage anticipé (mariage, naissance 3e enfant, achat RP, divorce avec enfant, fin contrat travail, surendettement, invalidité, décès, violences conjugales)
-- **Sortie après 5 ans** : exonération IR, seuls PS 17,2% sur les gains
+- **Sortie après 5 ans** : exonération IR, seuls les PS restent dus sur les gains (produits de placement : 17,2 % pour une sortie en 2025, 18,6 % à compter du 01/01/2026, LFSS 2026)
 - **Dividendes réinvestis** : exonérés IR tant qu'ils restent dans l'enveloppe
 
 ### PERCO / PERO (PER d'entreprise)

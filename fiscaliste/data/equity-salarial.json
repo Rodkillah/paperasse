@@ -3,7 +3,7 @@
     "revenus": 2025,
     "declaration": 2026,
     "sources": [
-      "BOI-RSA-ES (actionnariat salarié)",
+      "BOI-RSA-ES-20-20-20 (actions gratuites, régime fiscal des bénéficiaires, version du 21/05/2026)",
       "BOI-RPPM-PVBMI (BSPCE)"
     ]
   },
@@ -11,17 +11,20 @@
   "rsu": {
     "description": "Restricted Stock Units — attributions gratuites d'actions",
     "gain_acquisition": {
-      "definition": "Valeur de l'action à la date d'acquisition (vesting)",
-      "imposition": "Traitements et salaires, au barème progressif, case 1TT ou 1UT",
-      "cotisations_sociales": "Oui : CSG/CRDS 9.7% sur les revenus d'activité + contribution salariale 10% (plafond d'attribution à vérifier)",
-      "note_plans_qualifiants": "Plans qualifiants (loi Macron) : régime de faveur pour la fraction ≤ plafond annuel (PASS/2 puis PASS selon régime) — imposition comme PV mobilière au PFU + abattement 50% possible"
+      "definition": "Valeur des actions à la date d'acquisition définitive (vesting) : premier cours coté du jour de l'attribution définitive (BOI-RSA-ES-20-20-20 § 120)",
+      "fait_generateur": "Année de la cession (ou disposition, conversion au porteur, mise en location) des actions, pas année du vesting (CGI art. 80 quaterdecies ; BOI-RSA-ES-20-20-20 § 150)",
+      "plans_qualifiants_age_apres_2017": "Fraction annuelle <= 300 000 EUR : barème après abattement de 50 % (CGI art. 200 A, 3), le cas échéant abattement fixe 150-0 D ter ; prélèvements sociaux sur les revenus du patrimoine (CSS L. 136-6, I-e), sans abattement ; pas de contribution salariale. Fraction > 300 000 EUR : traitements et salaires, PS sur revenus d'activité et contribution salariale 10 % (CSS L. 137-14). Source : BOI-RSA-ES-20-20-20 § 45 et § 50 (version du 21/05/2026)",
+      "plans_qualifiants_age_2016_2017": "AGE du 31/12/2016 au 31/12/2017 : même limite annuelle de 300 000 EUR ; au-delà, salaire (BOI-RSA-ES-20-20-20 § 44)",
+      "plans_qualifiants_age_2015_2016": "AGE du 08/08/2015 au 30/12/2016 : PS revenus du patrimoine, contribution salariale supprimée (BOI-RSA-ES-20-20-20 § 48)",
+      "plans_non_qualifiants": "Traitements et salaires de droit commun, imposés l'année de l'acquisition définitive",
+      "moins_value_cession": "Une cession sous la valeur d'acquisition réduit le gain d'acquisition correspondant, dans la limite de ce montant (CGI art. 80 quaterdecies ; BOI-RSA-ES-20-20-20 § 190)"
     },
     "plus_value_cession": {
-      "definition": "Valeur cession − valeur vesting",
-      "imposition": "PFU 30% (ou barème sur option)",
-      "note": "Distincte du gain d'acquisition. Seulement si la cession se fait après le vesting."
+      "definition": "Prix de cession − valeur à la date d'acquisition définitive",
+      "imposition": "Régime des plus-values mobilières (BOI-RSA-ES-20-20-20 § 170) : PFU 31.4% (12.8% IR + 18.6% PS, revenus du patrimoine dès les revenus 2025, LFSS 2026) ou barème sur option globale",
+      "note": "Distincte du gain d'acquisition, imposée la même année (celle de la cession)."
     },
-    "piege_classique": "Traiter le gain RSU comme une PV mobilière classique — erreur majeure : il est d'abord soumis à cotisations sociales et IR comme du salaire."
+    "piege_classique": "Deux erreurs symétriques : traiter le gain d'acquisition d'un plan qualifiant (AGE après 2017, fraction <= 300 000 EUR) comme un salaire avec CSG d'activité et contribution 10 %, ou le traiter comme une simple PV mobilière au PFU. Il est au barème après abattement de 50 %, avec PS patrimoine, l'année de la cession."
   },
 
   "stock_options": {
@@ -45,8 +48,8 @@
     "gain_cession": {
       "definition": "Prix de vente des actions − prix d'exercice des BSPCE",
       "anciennete_3_ans_plus": {
-        "taux": 0.30,
-        "detail": "12.8% IR + 17.2% PS (équivalent PFU)"
+        "taux": 0.314,
+        "detail": "12.8% IR + 18.6% PS (revenus du patrimoine, 18.6% dès les revenus 2025, LFSS 2026 ; 17.2% jusqu'aux revenus 2024)"
       },
       "anciennete_moins_3_ans": {
         "taux": 0.50,

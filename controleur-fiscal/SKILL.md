@@ -1,7 +1,7 @@
 ---
 name: controleur-fiscal
 metadata:
-  last_updated: "2026-09-11"
+  last_updated: "2026-08-30"
 includes:
   - data/**
   - company.example.json

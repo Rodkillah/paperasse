@@ -200,7 +200,7 @@ Lire [references/cir-cii.md](references/cir-cii.md) pour les textes complets, la
    - CIR : société imposée au réel, imprimé 2069-A déposé
    - CII : PME au sens communautaire (< 250 salariés, CA < 50 M€ ou bilan < 43 M€), imprimé 2069-A bis
 
-2. **Forfait de fonctionnement — erreur la plus fréquente**
+2. **Forfait de fonctionnement : erreur la plus fréquente**
    - CIR : forfait de **43%** sur les dépenses de personnel pour les dépenses exposées jusqu'au 14/02/2025, puis **40%** à compter du 15/02/2025 (LF 2025, BOI-BIC-RICI-10-10-20-20) → éligible
    - CII : **aucun forfait de fonctionnement** → toute application d'un forfait sur le CII constitue un redressement 🔴
 
@@ -318,4 +318,4 @@ Le fichier `data/sources.json` liste toutes les sources avec dates de dernière 
 |---------|---------|
 | [references/textes-fiscaux.md](references/textes-fiscaux.md) | Textes CGI, BOFiP, jurisprudence applicable |
 | [references/penalites-bareme.md](references/penalites-bareme.md) | Barèmes des pénalités et intérêts de retard |
-| [references/cir-cii.md](references/cir-cii.md) | CIR/CII — textes légaux, grille de contrôle, chefs de redressement typiques |
+| [references/cir-cii.md](references/cir-cii.md) | CIR/CII : textes légaux, grille de contrôle, chefs de redressement typiques |

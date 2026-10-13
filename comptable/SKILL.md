@@ -30,7 +30,7 @@ Pour toute demande liée à une facture ou à la conformité e-facturation, vér
 
 ```
 invoicing.prefix              → Format de numérotation (ex: "F")
-invoicing.next_numbers        → Map { "2025": 42, "2026": 1 } — séquence par année (reset 1er janvier)
+invoicing.next_numbers        → Map { "2025": 42, "2026": 1 } : séquence par année (reset 1er janvier)
 invoicing.avoir_prefix        → Préfixe des avoirs (ex: "AV")
 einvoicing.pa                 → Plateforme agréée choisie
 einvoicing.pa_name            → Nom de la PA
@@ -59,7 +59,7 @@ Vérifier `metadata.last_updated` dans le frontmatter. Si > 6 mois :
 
 ```
 ⚠️ SKILL POTENTIELLEMENT OBSOLÈTE
-Dernière MAJ: [date] — Vérification requise
+Dernière MAJ: [date]. Vérification requise
 ```
 
 **Toujours vérifier en ligne avant de citer** : seuils TVA, taux IS/IR, plafonds, abattements, seuils micro, cotisations sociales, dates d'échéances, liste des plateformes agréées, formats acceptés.
@@ -103,7 +103,7 @@ Afficher les prochaines échéances (7-30 jours), adaptées au régime de l'entr
 Si l'échéance approche et `einvoicing.reception_ready` est `false`, afficher :
 
 ```
-🔴 FACTURATION ÉLECTRONIQUE — Réception obligatoire le 01/09/2026
+🔴 FACTURATION ÉLECTRONIQUE : Réception obligatoire le 01/09/2026
    Plateforme agréée non configurée.
    → Voir references/facturation/setup-facturation.md
 ```
@@ -136,12 +136,12 @@ Clarifier : nature de l'opération, documents disponibles, montants, dates, part
 
 ## Principes
 
-1. **Prudence** — Traitements conservateurs
-2. **Séparation** — Distinguer faits, hypothèses, interprétations
-3. **Transparence** — Ne jamais inventer de règles
-4. **Exhaustivité** — Ne jamais omettre une mention obligatoire sur une facture
-5. **Pragmatisme** — Recommander des solutions gratuites quand elles existent (ex: PA gratuite)
-6. **Humilité** — Dire quand un humain expert est nécessaire
+1. **Prudence** : Traitements conservateurs
+2. **Séparation** : Distinguer faits, hypothèses, interprétations
+3. **Transparence** : Ne jamais inventer de règles
+4. **Exhaustivité** : Ne jamais omettre une mention obligatoire sur une facture
+5. **Pragmatisme** : Recommander des solutions gratuites quand elles existent (ex: PA gratuite)
+6. **Humilité** : Dire quand un humain expert est nécessaire
 
 ## Données
 
@@ -270,7 +270,7 @@ OBLIGATIONS FACTURATION ÉLECTRONIQUE
 🔴/🟡/🟢 Plateforme agréée : [choisie / à choisir]
 ```
 
-Couleurs : 🔴 Échéance < 3 mois, non conforme — 🟠 Échéance < 6 mois, non conforme — 🟡 Conforme mais à vérifier — 🟢 Conforme.
+Couleurs : 🔴 Échéance < 3 mois, non conforme ; 🟠 Échéance < 6 mois, non conforme ; 🟡 Conforme mais à vérifier ; 🟢 Conforme.
 
 Pour déterminer la taille de l'entreprise et l'échéance d'émission : [references/facturation/reforme-2026.md](references/facturation/reforme-2026.md).
 
@@ -290,7 +290,7 @@ Pour déterminer la taille de l'entreprise et l'échéance d'émission : [refere
 
 ### Points clés à ne pas manquer
 
-Faits à remonter systématiquement dès qu'ils sont pertinents — pièges fréquents :
+Faits à remonter systématiquement dès qu'ils sont pertinents, pièges fréquents :
 
 - **Validation facture** : "description", "quantité" et "prix unitaire" sont **trois mentions distinctes obligatoires**. Une description correcte ne vaut pas pour les deux autres. Flagger chacune séparément.
 - **Nouvelles mentions obligatoires 2026** (factures B2B domestiques) : **quatre nouvelles données** : **SIREN du client**, **catégorie d'opération** (biens / services / mixte), **option pour le paiement de la TVA d'après les débits** (le cas échéant) et **adresse de livraison** complète si différente de l'adresse du client. La catégorie d'opération ne remplace pas la description des lignes, c'est un champ complémentaire. Toujours vérifier les quatre pour les factures émises à partir du 1er septembre 2026.
@@ -299,7 +299,7 @@ Faits à remonter systématiquement dès qu'ils sont pertinents — pièges fré
 
 ### Détails opérationnels
 
-Pour les workflows complets — checklists (mise en conformité, génération, validation), format JSON, pipeline Stripe → Facture → Qonto, numérotation par année, refunds/avoirs, réception e-factures — voir [references/facturation/workflow.md](references/facturation/workflow.md).
+Pour les workflows complets (checklists (mise en conformité, génération, validation), format JSON, pipeline Stripe → Facture → Qonto, numérotation par année, refunds/avoirs, réception e-factures), voir [references/facturation/workflow.md](references/facturation/workflow.md).
 
 Cas particuliers :
 - Pipeline Stripe/Qonto détaillé : [references/facturation/stripe-sync.md](references/facturation/stripe-sync.md)

@@ -35,12 +35,12 @@ pour les revenus 2025 (déclaration 2026). Pour toute autre année, renvoyer à 
 
 ```
 ⚠️ SKILL POTENTIELLEMENT OBSOLÈTE
-Dernière MAJ: [date] — Vérifier les barèmes de la dernière loi de finances.
+Dernière MAJ: [date]. Vérifier les barèmes de la dernière loi de finances.
 ```
 
 **Sources de vérification** : impots.gouv.fr, bofip.impots.gouv.fr, service-public.fr, legifrance.gouv.fr.
 
-## Valeurs de Référence — Revenus 2025 (déclaration 2026)
+## Valeurs de Référence : Revenus 2025 (déclaration 2026)
 
 ### Barème IR (par part)
 
@@ -71,7 +71,7 @@ Dernière MAJ: [date] — Vérifier les barèmes de la dernière loi de finances
 |--------|-----------|------------|
 | Salaires | 1AJ/1BJ | 10 % (min 509 €, max 14 555 €) ou frais réels |
 | Pensions / retraites | 1AS/1BS | 10 % (min 450 €, max 4 446 €) par foyer |
-| **Chômage (ARE)** | 1AP/1BP | **10 %** — l'ARE est un revenu de remplacement imposé selon les règles des traitements et salaires (BOI-RSA-BASE-30-50-20) ; l'abattement de 10 % s'applique sur le total salaires + ARE. Se déclare en 1AP/1BP (pas en 1AJ), mais bénéficie bien de l'abattement. |
+| **Chômage (ARE)** | 1AP/1BP | **10 %** : l'ARE est un revenu de remplacement imposé selon les règles des traitements et salaires (BOI-RSA-BASE-30-50-20) ; l'abattement de 10 % s'applique sur le total salaires + ARE. Se déclare en 1AP/1BP (pas en 1AJ), mais bénéficie bien de l'abattement. |
 | Dividendes (option barème) | 2DC | 40 % |
 | Dividendes (PFU) | 2DC | Aucun |
 | Micro-BNC | 5TE | 34 % (plafond 77 700 €) |
@@ -92,7 +92,7 @@ La LFSS 2026 (loi n° 2025-1403 du 30/12/2025, art. 12) a porté la CSG sur les 
 
 **Conséquence pratique** : pour la déclaration 2026 (revenus 2025), une PV mobilière sur compte-titres est imposée à **31,4 % au PFU** (12,8 % IR + 18,6 % PS), alors qu'un dividende encaissé en 2025 reste à **30 %** (12,8 % IR + 17,2 % PS). Le passage à 18,6 % pour les dividendes interviendra sur les encaissements 2026.
 
-- **CSG déductible : 6,8 %** — **uniquement si option barème** sur revenus du capital N-1
+- **CSG déductible : 6,8 %**, **uniquement si option barème** sur revenus du capital N-1
 - **Option barème globale** : concerne TOUS les revenus du capital de l'année
 
 ### PER (versements 2025)
@@ -117,8 +117,8 @@ Base : RFR, pas RNI. S'ajoute à l'IR net. Art. 223 sexies CGI.
 
 | Situation | Tranche 3 % | Tranche 4 % |
 |-----------|-------------|-------------|
-| Célibataire | 250 000 € — 500 000 € | > 500 000 € |
-| Couple | 500 000 € — 1 000 000 € | > 1 000 000 € |
+| Célibataire | 250 000 € à 500 000 € | > 500 000 € |
+| Couple | 500 000 € à 1 000 000 € | > 1 000 000 € |
 
 ### CDHR (Contribution Différentielle sur les Hauts Revenus)
 
@@ -136,9 +136,9 @@ Détail dans [references/cas-speciaux.md](references/cas-speciaux.md) section CD
 - Au-delà : imposition **PFU 31,4 %** (12,8 % IR + 18,6 % PS, LFSS 2026, PV mobilière = revenu du patrimoine) sur TOUTE la PV (pas seulement l'excédent), pour les cessions réalisées dès 2025
 - Formulaire 2086 obligatoire dès 1 € de cession > 305 €
 
-### Assurance-vie — rachats après 8 ans
+### Assurance-vie : rachats après 8 ans
 
-- **Abattement annuel** : 4 600 € (célibataire) / **9 200 € (couple)** — sur la quote-part de gains imposable
+- **Abattement annuel** : 4 600 € (célibataire) / **9 200 € (couple)**, sur la quote-part de gains imposable
 - **Seuil 150 000 €** de versements nets (tous contrats AV du foyer) : au-delà, PFU 30 % sur la fraction
 
 ### Fiches précises
@@ -149,12 +149,12 @@ machine.
 
 ## Principes
 
-1. **Cadre légal** — Optimisation uniquement dans le respect du CGI et de la doctrine BOFiP.
-2. **Séparation** — Distinguer IR, prélèvements sociaux, CEHR. Les confondre sous-estime la charge réelle.
-3. **Séquence** — Toujours dérouler le calcul de haut en bas (brut → net → imposable → impôt → net à payer).
-4. **Nuance** — Pas de "c'est toujours avantageux". Tout dépend du TMI, de l'horizon, de la situation familiale.
-5. **Humilité** — Dire quand un conseiller fiscal ou un avocat fiscaliste en exercice est nécessaire (situations complexes, contentieux, non-résidents).
-6. **Traçabilité** — Citer l'article du CGI ou le BOFiP pour chaque règle appliquée.
+1. **Cadre légal** : Optimisation uniquement dans le respect du CGI et de la doctrine BOFiP.
+2. **Séparation** : Distinguer IR, prélèvements sociaux, CEHR. Les confondre sous-estime la charge réelle.
+3. **Séquence** : Toujours dérouler le calcul de haut en bas (brut → net → imposable → impôt → net à payer).
+4. **Nuance** : Pas de "c'est toujours avantageux". Tout dépend du TMI, de l'horizon, de la situation familiale.
+5. **Humilité** : Dire quand un conseiller fiscal ou un avocat fiscaliste en exercice est nécessaire (situations complexes, contentieux, non-résidents).
+6. **Traçabilité** : Citer l'article du CGI ou le BOFiP pour chaque règle appliquée.
 
 ## Calcul déterministe
 
@@ -170,7 +170,7 @@ python fiscaliste/scripts/calc_ir.py --rni 45000 --parts 1
 python fiscaliste/scripts/calc_ir.py --rni 126000 --parts 3 --parts-base 2
 ```
 
-Le script applique : barème 2025, quotient familial avec plafonnement, décote, PS différenciés selon la nature du revenu (18,6 % sur revenus du patrimoine dès 2025 ; 17,2 % sur produits de placement 2025 ; 17,2 % inchangé sur AV/foncier nu/SCPI/PEL-CEL), CEHR. Il **ne traite pas** les réductions/crédits (à retrancher manuellement) ni les régimes spéciaux (revenus exceptionnels, non-résidents). Pour la CDHR (plancher 20 % sur RFR > 250/500 k€), voir [references/cas-speciaux.md](references/cas-speciaux.md) — calculée automatiquement par l'administration.
+Le script applique : barème 2025, quotient familial avec plafonnement, décote, PS différenciés selon la nature du revenu (18,6 % sur revenus du patrimoine dès 2025 ; 17,2 % sur produits de placement 2025 ; 17,2 % inchangé sur AV/foncier nu/SCPI/PEL-CEL), CEHR. Il **ne traite pas** les réductions/crédits (à retrancher manuellement) ni les régimes spéciaux (revenus exceptionnels, non-résidents). Pour la CDHR (plancher 20 % sur RFR > 250/500 k€), voir [references/cas-speciaux.md](references/cas-speciaux.md), calculée automatiquement par l'administration.
 
 Pour la fraîcheur des données : `python fiscaliste/scripts/update_data.py`.
 
@@ -208,7 +208,7 @@ Des **scénarios illustratifs** sont fournis dans [`examples/`](examples/README.
 
 **Si une information critique manque, la demander explicitement.** Ne pas faire de suppositions.
 
-### 3. Calculer — Séquence IR Standard
+### 3. Calculer : Séquence IR Standard
 
 1. Revenus bruts par catégorie → application des abattements → revenu net catégoriel
 2. Somme des revenus nets catégoriels → revenu brut global
@@ -216,7 +216,7 @@ Des **scénarios illustratifs** sont fournis dans [`examples/`](examples/README.
 4. RNI ÷ nombre de parts → quotient
 5. Barème progressif sur le quotient → impôt par part
 6. × nombre de parts → impôt brut
-7. Plafonnement du gain QF (si enfants à charge) — **toujours comparer gain réel vs gain max (N × 1 807 €)**
+7. Plafonnement du gain QF (si enfants à charge) : **toujours comparer gain réel vs gain max (N × 1 807 €)**
 8. Décote (si impôt brut < seuil)
 9. Réductions d'impôt (Pinel, dons, FCPI…) → impôt après réductions
 10. Crédits d'impôt (garde d'enfant, emploi à domicile) → impôt net final
@@ -235,7 +235,7 @@ Format de sortie structuré :
 
 ## Rappels Obligatoires par Sujet
 
-Ces points sont systématiquement vérifiés par les utilisateurs exigeants — ne jamais les omettre.
+Ces points sont systématiquement vérifiés par les utilisateurs exigeants : ne jamais les omettre.
 
 ### Pour toute simulation IR
 
@@ -254,7 +254,7 @@ Ces points sont systématiquement vérifiés par les utilisateurs exigeants — 
 ### Pour des RSU
 
 - Gain d'acquisition = **SALAIRE** (case 1TT), abattement 10 % applicable sur le total salaires.
-- PV de cession ultérieure = **distincte**, imposée au **PFU 31,4 %** (12,8 % IR + 18,6 % PS, LFSS 2026 — PV mobilière = revenu du patrimoine) pour les cessions réalisées dès 2025.
+- PV de cession ultérieure = **distincte**, imposée au **PFU 31,4 %** (12,8 % IR + 18,6 % PS, LFSS 2026, PV mobilière = revenu du patrimoine) pour les cessions réalisées dès 2025.
 - Toujours distinguer ces deux phases dans la réponse.
 - Mentionner la contribution salariale 10 % si plan qualifiant.
 - CSG 9,7 % sur le gain d'acquisition RSU.
@@ -291,4 +291,4 @@ Ces points sont systématiquement vérifiés par les utilisateurs exigeants — 
 - Les barèmes, plafonds et seuils changent chaque loi de finances → toujours vérifier pour l'année concernée.
 - Les situations complexes (non-résidents, revenus étrangers, régimes spéciaux DOM-TOM, contentieux) peuvent déroger aux règles générales et nécessitent un avocat fiscaliste.
 - Ce skill est un guide de raisonnement, pas un substitut à un conseiller fiscal pour les décisions importantes.
-- Les chiffres fournis sont indicatifs — seul l'avis d'imposition de la DGFIP fait foi.
+- Les chiffres fournis sont indicatifs : seul l'avis d'imposition de la DGFIP fait foi.

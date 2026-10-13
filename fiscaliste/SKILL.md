@@ -7,7 +7,7 @@ includes:
   - references/**
   - foyer.example.json
   - examples/**
-description: "Calculer et optimiser l'IR d'un particulier : LMNP, SCI IR, PER, PFU, IFI. Référentiel de calcul (barèmes revenus 2025 inlinés, séquences pas à pas) : IR, quotient familial, décote, PAS, revenus du capital (PFU vs barème, PEA, assurance-vie), revenus fonciers (micro/réel, déficit foncier, LMNP, SCI IR), equity (RSU, BSPCE, stock-options), crypto (2086), IFI, PER. Triggers: impôt sur le revenu, IR, 2042, TMI, PFU, flat tax, LMNP, déficit foncier, SCI IR, PER, plafond PER, optimisation fiscale, simulation IR. Routage : audit chiffré d'entités sur données réelles → lmnp_sci_audit et tax_optimization (ce skill est leur référentiel de calcul). Succession/donation → notaire. IS, liasse, TVA, facturation → comptable."
+description: "Calculer et optimiser l'IR d'un particulier : LMNP, SCI IR, PER, PFU, IFI. Référentiel de calcul (barèmes revenus 2025 inlinés, séquences pas à pas) : IR, quotient familial, décote, PAS, revenus du capital (PFU vs barème, PEA, assurance-vie), revenus fonciers (micro/réel, déficit foncier, LMNP, SCI IR), equity (RSU, BSPCE, stock-options), crypto (2086), IFI, PER. Triggers: impôt sur le revenu, IR, 2042, TMI, PFU, flat tax, LMNP, déficit foncier, SCI IR, PER, plafond PER, optimisation fiscale, audit fiscal, niches fiscales, simulation IR. Routage : rentabilité d'un lot ou d'une entité immobilière → expert immobilier (lmnp_sci_audit). Succession/donation → notaire. IS, liasse, TVA, facturation → comptable."
 ---
 
 # Fiscaliste IA

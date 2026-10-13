@@ -5,7 +5,7 @@ metadata:
 includes:
   - scripts/fetch_notaire_data.py
   - scripts/test_fetch_notaire_data.py
-description: "Chiffrer un acte notarié : achat immo, succession, donation, SCI. Frais de notaire (DMTO, émoluments, débours, CSI), plus-value immobilière, droits de succession et donation, démembrement, contrats de mariage, PACS, projets d'actes (compromis, statuts, testaments). Triggers: notaire, frais de notaire, compromis, succession, donation, testament, usufruit, nue-propriété, plus-value immobilière, DMTO, viager. Routage : rentabilité et gestion des lots → real_estate_audit et lot_management ; fiscalité IR des revenus fonciers → fiscaliste."
+description: "Chiffrer un acte notarié : achat immo, succession, donation, SCI. Frais de notaire (DMTO, émoluments, débours, CSI), plus-value immobilière, droits de succession et donation, démembrement, contrats de mariage, PACS, projets d'actes (compromis, statuts, testaments). Triggers: notaire, frais de notaire, compromis, succession, donation, testament, usufruit, nue-propriété, plus-value immobilière, DMTO, viager. Routage : rentabilité et gestion des lots → expert immobilier (real_estate_audit, lot_management) ; fiscalité IR des revenus fonciers → fiscaliste."
 ---
 
 # Notaire IA
@@ -32,7 +32,7 @@ Si > 6 mois depuis la dernière mise à jour :
 
 ```
 ⚠️ SKILL POTENTIELLEMENT OBSOLÈTE
-Dernière MAJ: [date] — Vérification requise
+Dernière MAJ: [date]. Vérification requise
 ```
 
 **Éléments à vérifier en ligne avant de les citer :**
@@ -52,12 +52,12 @@ Dernière MAJ: [date] — Vérification requise
 
 ## Principes
 
-1. **Prudence** — Privilégier l'interprétation la plus protectrice pour le client
-2. **Séparation** — Distinguer faits, hypothèses, interprétations
-3. **Transparence** — Citer systématiquement les textes applicables (article, code, BOFiP)
-4. **Humilité** — Dire quand un notaire en exercice est nécessaire
-5. **Exhaustivité** — Ne rien omettre dans les calculs (chaque centime compte)
-6. **Neutralité** — Le notaire conseille toutes les parties, pas une seule
+1. **Prudence** : Privilégier l'interprétation la plus protectrice pour le client
+2. **Séparation** : Distinguer faits, hypothèses, interprétations
+3. **Transparence** : Citer systématiquement les textes applicables (article, code, BOFiP)
+4. **Humilité** : Dire quand un notaire en exercice est nécessaire
+5. **Exhaustivité** : Ne rien omettre dans les calculs (chaque centime compte)
+6. **Neutralité** : Le notaire conseille toutes les parties, pas une seule
 
 ## Workflow Obligatoire
 
@@ -68,14 +68,14 @@ Déterminer le domaine et le workflow applicable :
 | Domaine | Référence | Workflow |
 |---------|-----------|----------|
 | Vente immobilière | [references/immobilier.md](references/immobilier.md) | [references/workflow-vente.md](references/workflow-vente.md) |
-| Plus-value immobilière | [references/plus-value.md](references/plus-value.md) | — |
+| Plus-value immobilière | [references/plus-value.md](references/plus-value.md) | - |
 | Succession | [references/succession.md](references/succession.md) | [references/workflow-succession.md](references/workflow-succession.md) |
 | Donation | [references/donation.md](references/donation.md) | [references/workflow-donation.md](references/workflow-donation.md) |
-| Famille (mariage, PACS, divorce) | [references/famille.md](references/famille.md) | — |
-| Sociétés (SCI, apports) | [references/societes.md](references/societes.md) | — |
-| Tarifs et émoluments | [references/tarifs-emoluments.md](references/tarifs-emoluments.md) | — |
-| Cas spéciaux | [references/cas-speciaux.md](references/cas-speciaux.md) | — |
-| Formats de sortie | [references/formats.md](references/formats.md) | — |
+| Famille (mariage, PACS, divorce) | [references/famille.md](references/famille.md) | - |
+| Sociétés (SCI, apports) | [references/societes.md](references/societes.md) | - |
+| Tarifs et émoluments | [references/tarifs-emoluments.md](references/tarifs-emoluments.md) | - |
+| Cas spéciaux | [references/cas-speciaux.md](references/cas-speciaux.md) | - |
+| Formats de sortie | [references/formats.md](references/formats.md) | - |
 
 ### 2. Collecter le Contexte
 

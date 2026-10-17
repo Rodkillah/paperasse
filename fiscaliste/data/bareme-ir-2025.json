@@ -24,22 +24,29 @@
 
   "quotient_familial": {
     "plafond_gain_par_demi_part": 1807,
-    "description": "Avantage fiscal maximum par demi-part supplémentaire liée aux enfants à charge. Au-delà du seuil de revenu, le gain QF stagne."
+    "plafond_parent_isole_premier_enfant": 4262,
+    "plafond_demi_part_case_l": 1079,
+    "reduction_complementaire_invalidite_ancien_combattant": 1801,
+    "reduction_complementaire_veuf_avec_enfants": 2011,
+    "base_legale": "art. 197, I-2 CGI (version en vigueur depuis le 21/02/2026, loi n° 2026-103 du 19 février 2026, art. 4) ; BOI-IR-LIQ-20-20-20 du 07/04/2026",
+    "description": "Avantage fiscal maximum par demi-part s'ajoutant à 1 part (célibataire, divorcé, séparé, veuf) ou à 2 parts (couple soumis à imposition commune, veuf l'année du décès), quelle que soit l'origine de la demi-part (enfant, invalidité, ancien combattant, case L, rattachement). Au-delà du seuil de revenu, le gain QF stagne.",
+    "regles_particulieres": "Parent isolé (case T, célibataire, divorcé ou séparé) : 4 262 € pour la part entière du premier enfant (2 131 € par demi-part pour chacun des deux premiers enfants s'ils sont tous en résidence alternée), puis 1 807 € par demi-part. Case L : 1 079 € pour la demi-part. Si le plafonnement joue : réduction complémentaire de 1 801 € au plus par demi-part invalidité, ancien combattant ou veuve de guerre, et de 2 011 € au plus pour la part supplémentaire du veuf avec enfants à charge (pas l'année du veuvage), chacune limitée à la hausse d'impôt due au plafonnement."
   },
 
   "rattachement_majeur_marie": {
-    "description": "Abattement sur RNI pour enfant majeur marié, pacsé ou ayant un enfant à charge rattaché (art. 196 B CGI). Pas de demi-part QF — abattement forfaitaire à la place.",
+    "description": "Abattement sur RNI pour enfant majeur marié, pacsé ou ayant un enfant à charge rattaché (art. 196 B CGI). Pas de demi-part QF : abattement forfaitaire à la place.",
     "abattement_par_personne": 6855,
     "base_legale": "art. 196 B CGI",
     "note": "L'abattement s'applique à chaque personne rattachée (conjoint + enfants le cas échéant). Case N (2042)."
   },
 
   "pension_alimentaire": {
-    "description": "Plafonds de déduction pour pension alimentaire versée à un enfant majeur (art. 156-II-2° CGI) — revenus 2025",
+    "description": "Plafonds de déduction pour pension alimentaire versée à un enfant majeur (art. 156-II-2° CGI), revenus 2025",
     "base_legale": "art. 156-II-2° CGI",
     "bofip": "BOI-IR-BASE-20-30-20-20",
     "enfant_celibataire_non_domicilie": 6855,
     "enfant_marie_ou_charge_de_famille": 13710,
+    "condition_13710": "Limite doublée seulement si vous subvenez seul aux besoins de l'enfant majeur chargé de famille ou assurez seul l'entretien du jeune ménage ; 6 855 € si les beaux-parents participent aussi à l'entretien du ménage (brochure pratique IR 2026, p. 228)",
     "forfait_domicilie_sans_ressources": {
       "enfant_celibataire": 4075,
       "enfant_marie_ou_pacse": 8150
@@ -52,9 +59,16 @@
     "seuil_couple": 3277,
     "plafond_celibataire": 897,
     "plafond_couple": 1483,
+    "taux": 0.4525,
     "formule_celibataire": "décote = 897 - (0.4525 × impôt_brut) si impôt_brut < 1982",
     "formule_couple": "décote = 1483 - (0.4525 × impôt_brut) si impôt_brut < 3277",
     "note": "La décote ne peut pas rendre l'impôt négatif. Source : BOI-IR-LIQ-20-20-30."
+  },
+
+  "recouvrement": {
+    "seuil_mise_en_recouvrement": 61,
+    "description": "Impôt sur le revenu non mis en recouvrement lorsque son montant, avant imputation des crédits d'impôt, est inférieur à ce seuil. calc_ir.py le signale par le champ informatif sous_seuil_recouvrement_61, sans mettre l'impôt à 0.",
+    "base_legale": "art. 1657, 1 bis CGI"
   },
 
   "abattement_salaires_10pct": {
@@ -66,13 +80,13 @@
 
   "abattement_pensions_10pct": {
     "taux": 0.10,
-    "minimum": 450,
-    "maximum": 4446,
-    "description": "Abattement sur pensions et retraites (case 1AS). Plafond par foyer."
+    "minimum": 454,
+    "maximum": 4439,
+    "description": "Abattement sur pensions et retraites (cases 1AS à 1DS), revenus 2025 : 10 % calculé par pensionné avec un minimum de 454 € par pensionné (sans excéder le montant de ses pensions), puis somme des abattements plafonnée à 4 439 € pour l'ensemble du foyer (art. 158-5-a CGI, BOI-RSA-PENS-30-10-10 § 160 à 180)."
   },
 
   "cehr": {
-    "description": "Contribution Exceptionnelle sur les Hauts Revenus — basée sur le RFR, pas le RNI. S'ajoute à l'IR net.",
+    "description": "Contribution Exceptionnelle sur les Hauts Revenus : basée sur le RFR, pas le RNI. S'ajoute à l'IR net.",
     "base_legale": "art. 223 sexies CGI",
     "seuils_celibataire": [
       { "de": 250000, "a": 500000, "taux": 0.03 },
@@ -82,23 +96,24 @@
       { "de": 500000, "a": 1000000, "taux": 0.03 },
       { "au_dela": 1000000, "taux": 0.04 }
     ],
-    "note": "Valeurs de référence — vérifier en cas de LFI modifiant le dispositif."
+    "note": "Valeurs de référence : vérifier en cas de LFI modifiant le dispositif."
   },
 
   "cdhr": {
-    "description": "Contribution Différentielle sur les Hauts Revenus — distincte de la CEHR. Impose un plancher d'imposition à 20 % sur les foyers à hauts RFR. Calcul automatique par l'administration après dépôt de la 2042.",
-    "base_legale": "art. 224 CGI, créé par l'art. 10 LFI 2025 (loi n° 2025-127 du 14/02/2025), pérennisé par la LFI 2026",
+    "description": "Contribution Différentielle sur les Hauts Revenus : distincte de la CEHR. Impose un plancher d'imposition à 20 % sur les foyers à hauts RFR. Calcul automatique par l'administration après dépôt de la 2042.",
+    "base_legale": "art. 224 CGI, créé par l'art. 10 LFI 2025 (loi n° 2025-127 du 14/02/2025), prorogé et modifié par l'art. 2 de la LFI 2026 (loi n° 2026-103 du 19/02/2026)",
     "plancher_imposition": 0.20,
     "seuils_rfr": {
       "celibataire_veuf_separe_divorce": 250000,
       "couple_marie_pacse": 500000
     },
-    "mecanisme": "La CDHR vient combler la différence si IR + CEHR < 20 % du RFR retraité. Distincte de la CEHR (les deux peuvent s'appliquer simultanément).",
+    "mecanisme": "CDHR = [(revenu de référence x 20 %) - décote] - [IR + CEHR non lissée + prélèvements libératoires + 1 500 € par personne à charge + 12 500 € pour un couple], si positive (BOI-IR-CDHR-10 § 240). IR majoré d'une liste de réductions et crédits réintégrés (pas l'emploi à domicile, la garde d'enfants ni Sofica ; dons réintégrés à compter des revenus 2026). Décote si revenu de référence <= 330 000 € (célibataire) ou <= 660 000 € (couple) : 20 % x revenu - 82,5 % x (revenu - 250 000 € ou 500 000 €). Revenus exceptionnels et IR afférent retenus pour le quart ; CEHR afférente retenue en totalité pour les revenus 2025, pour le quart à compter des revenus 2026. Distincte de la CEHR (les deux peuvent s'appliquer simultanément).",
     "calendrier": {
       "acompte": "95 % du montant estimé à verser entre le 1er et le 15 décembre de l'année des revenus, via le service 'Prélèvement à la source' sur impots.gouv.fr",
-      "solde": "calculé automatiquement par l'administration après dépôt de la 2042 au printemps suivant"
+      "solde": "calculé automatiquement par l'administration après dépôt de la 2042 au printemps suivant ; l'acompte s'impute sur la CDHR due, l'excédent est restitué",
+      "penalite": "majoration de 20 % si l'acompte n'est pas payé ou est payé en retard (assiette : 95 % de la CDHR due), ou s'il est inférieur de plus de 20 % à 95 % de la CDHR due (assiette : 95 % de la CDHR due moins l'acompte versé)"
     },
-    "perennisation": "Initialement transitoire (revenus 2024), pérennisée par la LFI 2026 jusqu'au retour du déficit public sous 3 % du PIB",
+    "perennisation": "Initialement limitée aux seuls revenus 2025 (art. 10 LFI 2025), prorogée par l'art. 2 de la LFI 2026 (loi n° 2026-103) : à compter des revenus 2025 et jusqu'à l'imposition des revenus de l'année pour laquelle la loi d'approbation des comptes constate un déficit du budget général inférieur à 3 % du PIB. Acompte et pénalités reconduits.",
     "source": "https://www.impots.gouv.fr/actualite/contribution-differentielle-sur-les-hauts-revenus-cdhr"
   }
 }

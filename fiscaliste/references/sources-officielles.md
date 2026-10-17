@@ -33,7 +33,7 @@ Si une règle ne peut pas être sourcée, **le dire explicitement** et inviter �
 
 ## Articles CGI essentiels
 
-### IR — mécanisme général
+### IR : mécanisme général
 
 | Règle | Article CGI | BOFiP |
 |-------|------------|-------|
@@ -48,10 +48,10 @@ Si une règle ne peut pas être sourcée, **le dire explicitement** et inviter �
 
 | Règle | Article CGI | BOFiP |
 |-------|------------|-------|
-| Traitements et salaires — abattement 10 % | art. 83-3° | BOI-RSA-BASE-30 |
-| Pensions — abattement 10 % | art. 158-5-a | BOI-RSA-PENS-30 |
-| Revenus fonciers — micro | art. 32 | BOI-RFPI-DECLA-20 |
-| Revenus fonciers — régime réel | art. 28 et s. | BOI-RFPI-BASE |
+| Traitements et salaires : abattement 10 % | art. 83-3° | BOI-RSA-BASE-30 |
+| Pensions : abattement 10 % | art. 158-5-a | BOI-RSA-PENS-30 |
+| Revenus fonciers : micro | art. 32 | BOI-RFPI-DECLA-20 |
+| Revenus fonciers : régime réel | art. 28 et s. | BOI-RFPI-BASE |
 | Déficit foncier | art. 156-I-3° | BOI-RFPI-BASE-30 |
 | LMNP / LMP | art. 155 IV, art. 151 septies | BOI-BIC-CHAMP-40 |
 
@@ -64,27 +64,28 @@ Si une règle ne peut pas être sourcée, **le dire explicitement** et inviter �
 | Abattement 40 % dividendes | art. 158-3° | BOI-RPPM-RCM-20-10-20 |
 | Plus-values mobilières | art. 150-0 A à 150-0 D | BOI-RPPM-PVBMI |
 | PEA | art. 157-5° bis | BOI-RPPM-RCM-40-50 |
-| Assurance-vie — rachats | art. 125-0 A, 200 A | BOI-RPPM-RCM-20-10-20-50 |
+| Assurance-vie : rachats | art. 125-0 A, 200 A | BOI-RPPM-RCM-20-10-20-50 |
 | CSG déductible 6,8 % | art. 154 quinquies-II | BOI-IR-BASE-20-20 |
 | Prélèvements sociaux | art. L. 136-1 et s. CSS | BOI-RPPM-PSOC |
-| Crypto — PAMC | art. 150 VH bis | BOI-RPPM-PVBMC |
+| Crypto : PAMC | art. 150 VH bis | BOI-RPPM-PVBMC |
 
 ### Equity salarial
 
 | Règle | Article CGI | BOFiP |
 |-------|------------|-------|
-| RSU — gain d'acquisition | art. 80 quaterdecies | BOI-RSA-ES-20 |
-| Stock-options | art. 80 bis | BOI-RSA-ES-10 |
-| BSPCE | art. 163 bis G | BOI-RSA-ES-30 |
+| RSU / AGA : gain d'acquisition | art. 80 quaterdecies, 200 A, 3 | BOI-RSA-ES-20-20-20 |
+| Stock-options | art. 80 bis | BOI-RSA-ES-20-10 |
+| Contribution salariale 10 % | CSS, art. L. 137-14 | BOI-RSA-ES-20-30 |
+| BSPCE | art. 163 bis G | BOI-RSA-ES-20-40 (titres souscrits depuis 2025 : BOI-RSA-ES-20-40-40) |
 | PEE | art. L. 3332-1 C. trav. | BOI-RSA-ES-10-10 |
 
 ### Épargne retraite
 
 | Règle | Article CGI | BOFiP |
 |-------|------------|-------|
-| PER individuel — déduction | art. 163 quatervicies | BOI-IR-BASE-20-50-20 |
+| PER individuel : déduction | art. 163 quatervicies | BOI-IR-BASE-20-50-20 |
 | Plafond de déduction | art. 163 quatervicies-I-2 | idem |
-| Sortie en capital — part capital | art. 158-5-b bis | idem |
+| Sortie en capital : part versements (1°) et part produits (2°) | art. 158, 5, b quinquies | BOI-RSA-PENS-30-10-20 |
 | Mutualisation couple | art. 163 quatervicies-I-2° | idem |
 
 ### IFI
@@ -92,9 +93,9 @@ Si une règle ne peut pas être sourcée, **le dire explicitement** et inviter �
 | Règle | Article CGI | BOFiP |
 |-------|------------|-------|
 | Assujettissement, seuil 1,3 M€ | art. 964 et s. | BOI-PAT-IFI-10 |
-| Abattement 30 % résidence principale | art. 973 | BOI-PAT-IFI-20-20-20 |
-| Barème | art. 977 | BOI-PAT-IFI-40 |
-| Plafonnement 75 % | art. 979 | BOI-PAT-IFI-40-30 |
+| Abattement 30 % résidence principale | art. 973 I | BOI-PAT-IFI-20-30-20 |
+| Barème et décote | art. 977 | BOI-PAT-IFI-40-10 |
+| Plafonnement 75 % | art. 979 | BOI-PAT-IFI-40-30-10 (clause anti-abus : BOI-PAT-IFI-40-30-20) |
 
 ### Déductions, réductions et crédits
 
@@ -119,9 +120,9 @@ Si une règle ne peut pas être sourcée, **le dire explicitement** et inviter �
 - LFSS de l'année N : fixe les taux de prélèvements sociaux applicables aux revenus encaissés à partir du 1er janvier N
 - **Attention aux dates d'application** : une LFI votée fin N-1 s'applique aux revenus N-1 (déclarés en N) ; une LFSS votée fin N-1 s'applique aux encaissements à partir du 1er janvier N.
 
-## Lien MEDEF / cabinets — ne JAMAIS citer comme source primaire
+## Lien MEDEF / cabinets : ne JAMAIS citer comme source primaire
 
-Les publications de cabinets d'avocats, fédérations professionnelles ou éditeurs (Dalloz, Lamy, Francis Lefebvre) **n'ont pas valeur opposable**. Les utiliser uniquement comme pédagogie ou piste d'investigation — jamais comme justification d'une règle.
+Les publications de cabinets d'avocats, fédérations professionnelles ou éditeurs (Dalloz, Lamy, Francis Lefebvre) **n'ont pas valeur opposable**. Les utiliser uniquement comme pédagogie ou piste d'investigation, jamais comme justification d'une règle.
 
 **Source opposable** = CGI + BOFiP + jurisprudence publiée (Conseil d'État, Cour de cassation).
 

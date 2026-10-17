@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Oracle DGFIP — interroge le simulateur officiel IR-IFI 2026 et parse la réponse.
+Oracle DGFIP : interroge le simulateur officiel IR-IFI 2026 et parse la réponse.
 
 À UTILISER UNIQUEMENT POUR LES EVALS OU LA VÉRIFICATION MANUELLE.
 Pas en runtime dans le skill (dépendance réseau + brittle + TOS).
@@ -26,7 +26,7 @@ Sortie :
 
 Note sur la stabilité :
     - Le simulateur DGFIP change chaque année (URL `calcul_impot/XXXX`).
-    - Le format HTML peut évoluer — re-vérifier les sélecteurs.
+    - Le format HTML peut évoluer, re-vérifier les sélecteurs.
     - Limiter les appels (ne pas spammer : ne pas faire plus de quelques dizaines
       d'appels par session).
 
@@ -101,7 +101,7 @@ def parse(html: str) -> dict:
 
 
 def main():
-    p = argparse.ArgumentParser(description="DGFIP simulator oracle — for evals only")
+    p = argparse.ArgumentParser(description="DGFIP simulator oracle : for evals only")
     p.add_argument("--input", help="Fichier JSON des cases à soumettre")
     p.add_argument("--cases", help="JSON inline, ex: '{\"0AM\":1,\"1AJ\":50000}'")
     p.add_argument("--raw", action="store_true", help="Affiche le HTML brut")

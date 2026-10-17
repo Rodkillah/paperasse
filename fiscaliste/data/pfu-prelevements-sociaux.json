@@ -4,9 +4,9 @@
     "declaration": 2026,
     "sources": [
       "https://bofip.impots.gouv.fr/",
-      "LFSS 2026 (loi n° 2025-1403 du 30 décembre 2025), art. 12 — modifie l'art. L. 136-8 CSS, porte la CSG sur revenus du capital de 9,2 % à 10,6 % (PS total 17,2 % -> 18,6 %)",
-      "Art. L. 136-6 CSS (revenus du patrimoine) — hausse applicable aux revenus 2025",
-      "Art. L. 136-7 CSS (produits de placement) — hausse applicable aux revenus encaissés à partir du 01/01/2026"
+      "LFSS 2026 (loi n° 2025-1403 du 30 décembre 2025), art. 12 : modifie l'art. L. 136-8 CSS, porte la CSG sur revenus du capital de 9,2 % à 10,6 % (PS total 17,2 % -> 18,6 %)",
+      "Art. L. 136-6 CSS (revenus du patrimoine) : hausse applicable aux revenus 2025",
+      "Art. L. 136-7 CSS (produits de placement) : hausse applicable aux revenus encaissés à partir du 01/01/2026"
     ]
   },
 
@@ -17,7 +17,7 @@
       "revenus_du_patrimoine": {
         "taux_global": 0.314,
         "detail_ps": 0.186,
-        "description": "PV mobilières (compte-titres), crypto, LMNP. Base CSS : L. 136-6. PS 18,6 % applicable aux revenus 2025 (déclaration 2026)."
+        "description": "PV mobilières (compte-titres), crypto, RCM 2025 n'ayant pas supporté les PS lors de leur versement. Base CSS : L. 136-6. PS 18,6 % applicable aux revenus 2025 (déclaration 2026). Le résultat LMNP supporte aussi 18,6 % de PS mais est imposé au barème (BIC), jamais au PFU : il n'entre pas dans ce taux global de 31,4 %."
       },
       "produits_de_placement_2025": {
         "taux_global": 0.30,
@@ -41,13 +41,13 @@
     },
     "taux_revenus_du_patrimoine_2025": {
       "valeur": 0.186,
-      "couvre": ["PV mobilières (CTO)", "crypto (PAMC)", "LMNP", "revenus locatifs reclassés"],
-      "base_legale": "art. L. 136-6 CSS modifié par LFSS 2026 art. 12 — applicable dès les revenus 2025"
+      "couvre": ["PV mobilières (CTO)", "crypto (PAMC)", "LMNP (PS seuls : IR au barème, jamais au PFU)", "revenus locatifs reclassés", "RCM 2025 n'ayant pas supporté les PS lors de leur versement"],
+      "base_legale": "art. L. 136-6 CSS modifié par LFSS 2026 art. 12 : applicable dès les revenus 2025"
     },
     "taux_produits_de_placement_2025": {
       "valeur": 0.172,
-      "couvre": ["dividendes", "intérêts", "RCM", "gains PEA à la sortie", "PER capital"],
-      "base_legale": "art. L. 136-7 CSS — taux 17,2 % maintenu pour les encaissements 2025",
+      "couvre": ["dividendes", "intérêts", "RCM", "gains PEA à la sortie", "PER capital (si PS prélevés par l'établissement en 2025, sinon 18,6 % via l'avis : brochure IR 2026 p. 128, ligne 2TZ)"],
+      "base_legale": "art. L. 136-7 CSS : taux 17,2 % pour les encaissements 2025 dont les PS ont été acquittés lors du versement (établissement payeur ou formulaire 2778). Les RCM 2025 qui n'ont pas supporté les PS lors du versement relèvent de l'art. L. 136-6 et supportent 18,6 % sur l'avis 2026 (brochure IR 2026, p. 124)",
       "note": "Passage à 18,6 % pour les encaissements à compter du 01/01/2026"
     },
     "taux_produits_de_placement_2026": {
@@ -57,11 +57,11 @@
     },
     "taux_inchanges_17_2": {
       "valeur": 0.172,
-      "couvre": ["assurance-vie", "contrats de capitalisation", "foncier nu", "SCPI", "PEL/CEL anciens", "PEP"],
-      "note": "Cas exclus de la hausse LFSS 2026 — taux 17,2 % permanent"
+      "couvre": ["assurance-vie et contrats de capitalisation (sauf rente-survie et épargne handicap, 18,6 % dès le 01/01/2026)", "foncier nu", "SCPI (revenus fonciers)", "plus-values immobilières", "CEL ouverts jusqu'au 31/12/2017", "PEL ouverts jusqu'au 31/12/2017 (intérêts des 12 premières années)", "PEP"],
+      "note": "CSG maintenue à 9,2 % (art. L. 136-8, IV CSS, rétabli par la LFSS 2026 art. 12). Les livrets réglementés sont exonérés de PS et ne figurent pas ici."
     },
     "dont_csg_deductible_si_bareme": 0.068,
-    "note_csg_deductible": "La CSG déductible (6,8 %) ne s'applique QUE si option barème progressif. Zéro déductible sous PFU. Elle s'impute en N+1 sur le RNI.",
+    "note_csg_deductible": "Revenus du capital : CSG déductible (6,8 %) seulement si option barème, zéro sous PFU. Déduite du revenu global de l'année de paiement des PS : même année pour les RCM prélevés à la source (ligne 2BH), N+1 pour les PV et RCM taxés par voie de rôle. Produits des fonds en euros d'AV des années antérieures (ligne 2CG) : jamais déductible. Revenus fonciers et LMNP : déductible sans condition d'option.",
     "taux_plus_values_immo": 0.172
   },
 
@@ -72,10 +72,10 @@
   },
 
   "arbitrage_pfu_vs_bareme": {
-    "description": "Règle d'orientation rapide — à affiner selon composition des revenus",
+    "description": "Règle d'orientation rapide : à affiner selon composition des revenus",
     "tmi_faible_bareme_avantageux": "TMI 0% ou 11%, le barème est presque toujours meilleur (tranche basse + abattement 40% sur dividendes + CSG déductible)",
-    "tmi_eleve_pfu_avantageux": "TMI 30%+, le PFU est souvent meilleur pour intérêts et plus-values. Pour dividendes : arbitrage à faire (abattement 40% peut compenser, surtout en 2025 où PS = 17,2 %)",
-    "rappel_option_globale": "L'option barème est globale et irrévocable pour l'année — engage TOUS les revenus du capital",
+    "tmi_eleve_pfu_avantageux": "TMI 30%+, le PFU est souvent meilleur pour intérêts et plus-values. Pour dividendes : arbitrage à faire (abattement 40 % et CSG déductible 6,8 %). Les PS (17,2 % ou 18,6 %) sont dus au même taux dans les deux options et ne changent pas l'arbitrage.",
+    "rappel_option_globale": "L'option barème (case 2OP) est globale et engage tous les RCM et PV de cession de valeurs mobilières de l'année (les PV crypto relèvent de l'option distincte 3CN). Revenus 2025 : irrévocable après la date limite de déclaration. Revenus 2026 et suivants : révocable (LFI 2026 art. 126 et art. 1er II 1° ; CGI art. 200 A 2)",
     "note_lfss_2026": "À partir des revenus 2026, le PFU monte à 31,4 % aussi sur dividendes/intérêts. Le calcul d'arbitrage doit en tenir compte pour les projections N+1."
   }
 }

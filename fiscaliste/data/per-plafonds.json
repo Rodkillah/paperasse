@@ -13,22 +13,39 @@
 
   "per_individuel": {
     "description": "Plafond de déduction PER pour les versements 2025 (déclaration 2026)",
-    "calcul": "10% des revenus professionnels nets (salaires après abattement 10%, BNC, BIC) de l'année N-1",
-    "plancher_euros": 4710,
-    "plancher_base": "10% × PASS 2025 (47 100 €) — garanti même sans revenus",
+    "calcul": "10 % des revenus d'activité professionnelle de l'année N-1 nets de frais professionnels (salaires après abattement 10 % ou frais réels, allocations chômage, BIC, BNC, BA d'une activité exercée à titre professionnel, hors LMNP), revenus retenus dans la limite de 8 PASS N-1, ou 10 % du PASS N-1 si c'est plus élevé ; plafond ensuite diminué des cotisations d'entreprise N-1 (article 83 et PERO, abondement PERCO/PERECO/PERO, fraction Madelin, jours de congé affectés)",
+    "plancher_euros": 4637,
+    "plancher_base": "10 % × PASS 2024 (46 368 €), PASS de l'année précédant le versement ; s'applique même sans revenus professionnels, puis diminué des cotisations d'entreprise versées en 2024 (article 83, abondement PERCO/PERECO/PERO, Madelin)",
     "plafond_absolu_euros": 37680,
     "plafond_absolu_base": "10% × 8 × PASS 2025",
     "report": {
       "description": "Plafonds non utilisés des 3 années précédentes mobilisables",
       "ordre": "Utiliser le plafond N en premier, puis les plafonds N-3, N-2, N-1 (ordre FIFO le plus ancien en premier)"
     },
-    "mutualisation_couple": "Les époux/pacsés soumis à imposition commune peuvent mutualiser leurs plafonds (case à cocher sur 2042)"
+    "mutualisation_couple": "Les époux/pacsés soumis à imposition commune peuvent mutualiser leurs plafonds en cochant la case 6QR de la 2042 : plafonds et cotisations additionnés, imputation sur le plafond de l'année puis sur les soldes antérieurs"
+  },
+
+  "per_individuel_versements_2026": {
+    "description": "Plafond de déduction PER pour les versements 2026 (déclaration 2027)",
+    "plancher_euros": 4710,
+    "plancher_base": "10 % × PASS 2025 (47 100 €)",
+    "plafond_absolu_euros": 37680,
+    "plafond_absolu_base": "10 % × 8 × PASS 2025",
+    "soldes_mobilisables": "Soldes non utilisés 2023, 2024 et 2025 (report de 3 ans pour ces soldes) ; le solde 2026 sera reportable 5 ans"
   },
 
   "sortie_per": {
     "versements_deduits_entree": "Imposés à la sortie comme revenu (pension ou capital selon choix)",
-    "versements_non_deduits": "Sortie partiellement exonérée — seuls les gains sont imposés (PFU)",
+    "versements_non_deduits": "Sortie partiellement exonérée : seuls les gains sont imposés (PFU)",
     "cas_sortie_anticipee": "Autorisée pour : achat résidence principale, accidents de la vie (décès conjoint, invalidité, surendettement, fin droits chômage, cessation activité non salariée)"
+  },
+
+  "limite_age_70_ans": {
+    "regle": "Versements faits à compter du 70e anniversaire du titulaire non déductibles (volontaires et obligatoires), exonération épargne salariale supprimée",
+    "entree_en_vigueur": "Versements à partir du 1er janvier 2026",
+    "texte": "Loi n° 2026-103 du 19 février 2026, art. 9 ; CGI art. 163 quinvicies ; BOFiP ACTU-2026-00106 du 10/08/2026",
+    "mutualisation": "Sans objet au titre de l'année suivant celle où l'un des membres du couple atteint 70 ans",
+    "sortie": "Part de capital correspondant à ces versements exonérée d'IR (CGI art. 81, 4° bis c)"
   },
 
   "arbitrage_per": {

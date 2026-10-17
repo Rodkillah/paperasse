@@ -6,7 +6,7 @@
   },
 
   "plafonnement_global": {
-    "description": "Cap annuel sur l'ensemble des avantages fiscaux (réductions et crédits) issus de dispositifs de défiscalisation. Au-delà du plafond, l'excédent est perdu (pas reportable).",
+    "description": "Cap annuel sur l'ensemble des avantages fiscaux (réductions et crédits) issus de dispositifs de défiscalisation, sauf ceux expressément exclus (CGI art. 200-0 A). Au-delà du plafond, l'excédent est en principe perdu ; exception : la fraction de réduction IR-PME (souscriptions depuis le 1.1.2013) qui excède le plafond est reportable sur les 5 années suivantes (art. 199 terdecies-0 A).",
     "plafond_metropole": 10000,
     "plafond_investissements_outre_mer": 18000,
     "note": "Le plafond s'applique APRÈS calcul de toutes les réductions, pas avant. Piège classique : cumuler Pinel + FCPI + outre-mer sans vérifier le plafond global."
@@ -19,22 +19,26 @@
       "Denormandie",
       "Loc'Avantages",
       "FCPI / FIP (souscription)",
-      "Malraux (dans certaines conditions)",
-      "Monuments historiques (partiellement)",
+      "Malraux, seulement pour les opérations engagées avant le 1.1.2013",
+      "Travaux de conservation d'objets mobiliers classés monuments historiques (art. 199 duovicies)",
       "Investissement forestier",
-      "Investissement corse"
+      "FIP Corse et FIP outre-mer (souscription)",
+      "Crédit d'impôt emploi d'un salarié à domicile (art. 199 sexdecies)",
+      "Crédit d'impôt frais de garde des jeunes enfants (art. 200 quater B)",
+      "Crédit d'impôt systèmes de charge pour véhicules électriques (art. 200 quater C)",
+      "Investissements outre-mer, SOFICA, Pinel et Denormandie outre-mer : plafond majoré à 18 000 €"
     ]
   },
 
   "dispositifs_hors_plafond": {
-    "note": "Dispositifs exclus du plafond global — à vérifier systématiquement",
+    "note": "Dispositifs exclus du plafond global (CGI art. 200-0 A ; brochure pratique IR 2026, Plafonnement global, p. 319-320) : dons, avantages liés à la situation personnelle du contribuable ou à un objectif d'intérêt général sans contrepartie, et exclusions expresses",
     "liste": [
       "Dons aux associations (réduction 66% ou 75% selon type)",
-      "Emploi à domicile (crédit d'impôt 50%)",
-      "Garde d'enfant hors domicile (crédit d'impôt 50%)",
-      "Girardin industriel outre-mer (sous conditions)",
       "Cotisations syndicales (crédit d'impôt 66%)",
-      "Investissement outre-mer (certaines catégories)",
+      "Malraux pour les opérations engagées depuis le 1.1.2013",
+      "Déduction des charges des immeubles classés ou inscrits monuments historiques (régime de déduction, non plafonné)",
+      "IR-PME JEI, JEU, JEIC et JEIR (art. 199 terdecies-0 A bis et 199 terdecies-0 A ter)",
+      "Crédits d'impôt des entrepreneurs individuels applicables à la fois à l'IR et à l'IS",
       "Frais de scolarité des enfants (réduction forfaitaire 7EA/7EC/7EF)"
     ]
   },
@@ -45,18 +49,21 @@
       "taux_reduction_dons_aide_personnes": 0.75,
       "plafond_assiette_standard": "20% du revenu imposable",
       "plafond_dons_aide_personnes": 1000,
-      "note_aide_personnes": "Plafond majoré pour dons aux associations venant en aide aux personnes en difficulté (Restos du Cœur, Secours Populaire, etc.)"
+      "plafond_dons_aide_personnes_depuis_14_10_2025": 2000,
+      "note_aide_personnes": "Taux de 75 % pour les dons aux organismes d'aide aux personnes en difficulté (Restos du Cœur, Secours populaire, etc.) et, depuis le 15.2.2025, aux organismes accompagnant les victimes de violence domestique : limite de 1 000 € pour les dons du 1.1 au 13.10.2025 (case 7UD), portée à 2 000 € pour les dons à compter du 14.10.2025, ce plafond de 2 000 € incluant les dons du 1.1 au 13.10.2025 (case 7UQ ; LF 2026, art. 28 ; CGI, art. 200). Au-delà : 66 %."
     },
     "emploi_a_domicile": {
       "taux_credit": 0.50,
       "plafond_depenses_general": 12000,
-      "majoration_enfants": "+1 500 € par enfant à charge (plafond max 15 000 €)",
-      "note": "Crédit d'impôt — remboursé même si impôt nul"
+      "majoration_enfants": "+1 500 € par enfant à charge (moitié en résidence alternée), par membre du foyer de plus de 65 ans ou par ascendant de plus de 65 ans éligible à l'APA (plafond max 15 000 €) ; première année d'emploi direct : 15 000 € (max 18 000 €) ; invalidité : 20 000 €",
+      "note": "Crédit d'impôt, remboursé même si impôt nul, compris dans le plafonnement global de 10 000 € (art. 200-0 A)"
     },
     "garde_enfant_exterieur": {
       "taux_credit": 0.50,
       "plafond_depenses_par_enfant": 3500,
-      "age_limite": "Enfant de moins de 6 ans au 1er janvier"
+      "plafond_depenses_par_enfant_residence_alternee": 1750,
+      "age_limite": "Enfant de moins de 6 ans au 1er janvier de l'année des revenus (nés après le 31.12.2018 pour les revenus 2025)",
+      "plafonnement_global": "Compris dans le plafond de 10 000 € (art. 200-0 A)"
     }
   },
 
@@ -70,12 +77,12 @@
     "garde_alternee": "Réduction divisée par deux entre les deux foyers (cases 7EB/7ED/7EG)",
     "exclusions": ["apprentissage", "congé formation", "contrat d'études avec l'employeur"],
     "pieges": [
-      "Job étudiant à côté des études (contrat sans lien avec la formation) : éligible — la condition BOFiP vise les contrats structurellement liés à la formation, pas un emploi indépendant",
+      "Job étudiant à côté des études (contrat sans lien avec la formation) : éligible : la condition BOFiP vise les contrats structurellement liés à la formation, pas un emploi indépendant",
       "Stage indemnisé obligatoire intégré au cursus : éligible (prévu explicitement par BOFiP BOI-IR-RICI-30)",
       "Appréciation au 31/12 : si l'enfant a arrêté ses études en cours d'année et n'est inscrit nulle part au 31/12 → pas de réduction",
       "Cumul interdit avec pension alimentaire déductible (6EL/6EM pour un enfant majeur, post-2006 ; 6GI/6GJ résiduel si décision de justice antérieure à 2006, formulaire 2042 C avec majoration de 25%) : un enfant pour lequel une pension est déduite ne fait plus partie du foyer → pas de réduction"
     ],
-    "note": "Montants stables (non indexés annuellement). Réduction non remboursable — excédent perdu si impôt < réduction.",
+    "note": "Montants stables (non indexés annuellement). Réduction non remboursable : excédent perdu si impôt < réduction.",
     "source": "https://www.service-public.gouv.fr/particuliers/vosdroits/F9/",
     "bofip": "BOI-IR-RICI-30",
     "cgi": "art. 199 quater F",
@@ -91,12 +98,12 @@
     },
     "reduction": {
       "sapplique_sur": "Impôt calculé",
-      "remboursable_si_excedent": "Non — impôt minimum = 0",
+      "remboursable_si_excedent": "Non : impôt minimum = 0",
       "exemples": ["Pinel", "Dons", "Malraux", "FCPI"]
     },
     "credit": {
       "sapplique_sur": "Impôt calculé",
-      "remboursable_si_excedent": "Oui — remboursé si > impôt dû",
+      "remboursable_si_excedent": "Oui : remboursé si > impôt dû",
       "exemples": ["Emploi à domicile", "Garde d'enfant", "Cotisations syndicales"]
     }
   }

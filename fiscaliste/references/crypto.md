@@ -4,7 +4,7 @@ Voir `data/plus-values-mobilieres-crypto.json` → `crypto_actifs`.
 
 ## Régime des particuliers (occasionnel)
 
-Le régime des particuliers s'applique aux cessions **occasionnelles** d'actifs numériques. Si l'activité est habituelle/professionnelle, requalification en **BIC** (cotisations sociales TNS, régime plus lourd).
+Le régime des particuliers s'applique aux cessions **occasionnelles** d'actifs numériques. Depuis 2023 (LFI 2022, art. 70), des opérations d'achat, de vente et d'échange effectuées **dans des conditions analogues à celles d'un professionnel** relèvent des **BNC** (art. 92, 2, 1° bis CGI), régime réservé à des cas exceptionnels ; seule une personne dont **la profession** consiste à acheter et revendre des actifs numériques relève des **BIC** (art. 34 CGI).
 
 **Indices d'activité habituelle** :
 - Volume de transactions élevé
@@ -22,7 +22,7 @@ Le régime des particuliers s'applique aux cessions **occasionnelles** d'actifs 
 | Échange crypto-to-crypto (BTC → ETH) | **Non** (sursis, art. 150 VH bis) |
 | Crypto → stablecoin (USDC, USDT…) | **Non** (stablecoins traités comme crypto-actifs) |
 | Stablecoin → € / USD | **Oui** (fait générateur) |
-| Staking / mining / airdrop | Selon contexte — souvent BNC ou BIC, pas PV mobilière |
+| Staking / mining / airdrop | Selon contexte : souvent BNC ou BIC, pas PV mobilière |
 
 **Règle du sursis crypto-to-crypto** : les échanges entre crypto-actifs ne déclenchent pas l'imposition. Seul le passage en monnaie fiat (ou en biens/services) est taxable.
 
@@ -54,7 +54,7 @@ plus_value_cession = prix_cession − (prix_total_acquisition_portefeuille × pr
 
 Possible depuis la LFI 2022 (applicable revenus 2023). **Avantageuse si TMI ≤ 11%.**
 
-**Rappel** : l'option barème est **globale** — s'applique à tous les revenus du capital de l'année (y compris dividendes, intérêts, PV mobilières). Arbitrage à faire au niveau global.
+**Rappel** : l'option barème crypto se coche **case 3CN** de la 2042 C. Elle est expresse, irrévocable et globale pour **toutes les PV crypto du foyer de l'année**, mais **indépendante** de l'option 2OP (revenus de capitaux mobiliers et PV de cession de valeurs mobilières) : on peut opter pour l'une sans l'autre, et il faut exercer les deux options pour tout mettre au barème.
 
 ## Exonération du petit portefeuille
 
@@ -73,7 +73,7 @@ Les moins-values de l'année sont **compensables** avec les plus-values de l'ann
 
 ## Formulaire 2086
 
-Déclaration obligatoire détaillant **chaque cession** :
+Déclaration obligatoire détaillant **chaque cession** (contre monnaie, bien ou service ; les échanges sans soulte entre crypto-actifs ne se déclarent pas), à joindre à la 2042 **même si le total des cessions est ≤ 305 €** (on n'indique alors que le prix de chaque cession) :
 - Date de la cession
 - Valeur du portefeuille avant cession
 - Prix total d'acquisition du portefeuille
@@ -83,20 +83,21 @@ Déclaration obligatoire détaillant **chaque cession** :
 **Report sur 2042 C** :
 - Case 3AN : plus-value nette annuelle (gain)
 - Case 3BN : moins-value nette annuelle (perte)
+- Case 3CN : à cocher pour opter pour le barème progressif (option distincte de 2OP)
 
 ## Staking, mining, airdrops
 
-**Régime distinct des PV** — imposition selon la nature :
+**Régime distinct des PV** : imposition selon la nature :
 
 | Activité | Régime probable |
 |----------|----------------|
 | Staking occasionnel | BNC non professionnel |
-| Mining | BIC |
+| Mining (minage) | BNC (art. 92 CGI, BOI-BNC-CHAMP-10-10-20-40 § 1080) |
 | Staking/lending professionnel | BIC |
 | Airdrop reçu passivement | Non imposable à la réception, PV au moment de la cession |
 | Rewards actifs (tâches à accomplir) | BNC ou salaire |
 
-**Staking occasionnel — déclaration BNC à la réception** : valorisation en EUR à chaque date de réception, déclaration formulaire 2042 C PRO case 5HQ (micro-BNC, abattement 34%) ou 5HG (réel). Exonération micro-BNC si recettes ≤ 305 €.
+**Staking occasionnel, déclaration BNC à la réception** : valorisation en EUR à chaque date de réception, déclaration formulaire 2042 C PRO case 5KU (micro-BNC non professionnel, recettes brutes, abattement 34 % avec minimum 305 €) ou 5JG (déclaration contrôlée, BNC non professionnels). Les cases 5HQ et 5QC visent les BNC professionnels ; 5HG est la case des plus-values à long terme exonérées en cas de départ à la retraite. Si ces revenus ne sont pas soumis aux cotisations sociales par un organisme social (cas général d'une activité occasionnelle), reporter aussi leur montant net (après abattement de 34 % en micro) case 5HY, pour les prélèvements sociaux. Si les recettes sont ≤ 305 €, l'abattement minimum (limité au montant des recettes) ramène le bénéfice imposable à 0.
 
 **Zone grise** : la doctrine DGFIP évolue. Vérifier les dernières positions BOFiP.
 
@@ -111,7 +112,7 @@ Pour 6 ans minimum (délai de reprise) :
 
 ## Transmission au décès : purge des plus-values latentes
 
-**Principe** : le décès n'est pas une "cession à titre onéreux" au sens de l'art. 150 VH bis CGI. Les plus-values latentes accumulées par le défunt sont définitivement exonérées d'IR et de prélèvements sociaux — on parle de **purge des PV latentes**.
+**Principe** : le décès n'est pas une "cession à titre onéreux" au sens de l'art. 150 VH bis CGI. Les plus-values latentes accumulées par le défunt sont définitivement exonérées d'IR et de prélèvements sociaux : on parle de **purge des PV latentes**.
 
 ### Mécanisme
 
@@ -124,10 +125,12 @@ Ils paient des **droits de succession** sur cette valeur (après abattements lé
 | | Vente de son vivant | Transmission par décès |
 |---|---|---|
 | Portefeuille au jour J | 500 000 € | 500 000 € |
-| Prix d'acquisition initial | 100 000 € | — |
-| PV latente | 400 000 € | — |
+| Prix d'acquisition initial | 100 000 € | sans objet |
+| PV latente | 400 000 € | purgée au décès |
 | PFU 31,4 % sur la PV | **125 600 €** | **0 €** |
-| Droits de succession (enfant, ~barème) | — | ~75 000 € (sur 400 k€ nets d'abattement) |
+| CEHR l'année de la vente (célibataire sans autre revenu : (400 000 - 250 000) × 3 %, avant lissage de l'art. 223 sexies II qui peut la réduire ou l'annuler si les RFR des deux années précédentes étaient faibles) | **4 500 €** | **0 €** |
+| CDHR (revenus 2025 et suivants) : 0 € si la PV est déclarée comme revenu exceptionnel dans le cadre CDHR de la 2042 C (retenue pour le quart) ; sinon 20 % × 400 000 - (51 200 + 4 500) | **jusqu'à 24 300 €** | **0 €** |
+| Droits de succession (un enfant, abattement 100 000 €) | dus plus tard, au décès, sur le patrimoine restant après impôts | **78 194 €** (barème art. 777 CGI sur 400 000 € taxables) |
 
 L'avantage dépend du lien familial et des abattements applicables (100 000 € par enfant, exonération conjoint…).
 
@@ -145,7 +148,7 @@ Ce mécanisme est fondé sur l'absence du décès dans les faits générateurs d
 ## Références CGI / BOFiP
 
 - Régime particulier crypto : art. 150 VH bis CGI
-- Activité habituelle (BIC) : art. 34 CGI
+- Opérations dans des conditions analogues à un professionnel (BNC) : art. 92, 2, 1° bis CGI ; profession d'achat-revente (BIC) : art. 34 CGI
 - Méthode PAMC : art. 150 VH bis-II CGI
 - Sursis échange crypto-crypto : art. 150 VH bis-I-2 CGI
 - Déclaration de succession (actifs numériques) : art. 750 ter CGI

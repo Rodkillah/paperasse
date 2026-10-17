@@ -113,7 +113,7 @@ def check_sources():
 
 
 def main():
-    print(f"\n{BOLD}FISCALISTE — Fraîcheur des données{RESET}")
+    print(f"\n{BOLD}FISCALISTE : Fraîcheur des données{RESET}")
     print("=" * 72)
 
     print(f"\n{BOLD}Skill{RESET}")
@@ -127,11 +127,11 @@ def main():
     if stale:
         print(f"{RED}À mettre à jour ({len(stale)}) :{RESET}")
         for name, msg in stale:
-            print(f"  ✗ {name} — {msg}")
+            print(f"  ✗ {name} : {msg}")
     if warn:
         print(f"{YELLOW}À surveiller ({len(warn)}) :{RESET}")
         for name, msg in warn:
-            print(f"  ! {name} — {msg}")
+            print(f"  ! {name} : {msg}")
     if not stale and not warn:
         print(f"{GREEN}Tout est à jour.{RESET}")
 

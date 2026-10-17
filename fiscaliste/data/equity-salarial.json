@@ -4,20 +4,22 @@
     "declaration": 2026,
     "sources": [
       "BOI-RSA-ES-20-20-20 (actions gratuites, régime fiscal des bénéficiaires, version du 21/05/2026)",
-      "BOI-RPPM-PVBMI (BSPCE)"
+      "BOI-RSA-ES-20-40 et BOI-RSA-ES-20-40-40 (BSPCE)", "BOI-RSA-ES-20-30 (contribution salariale)", "BOI-RSA-ES-20-10 (options sur titres)"
     ]
   },
 
   "rsu": {
-    "description": "Restricted Stock Units — attributions gratuites d'actions",
+    "description": "Restricted Stock Units : attributions gratuites d'actions",
     "gain_acquisition": {
       "definition": "Valeur des actions à la date d'acquisition définitive (vesting) : premier cours coté du jour de l'attribution définitive (BOI-RSA-ES-20-20-20 § 120)",
       "fait_generateur": "Année de la cession (ou disposition, conversion au porteur, mise en location) des actions, pas année du vesting (CGI art. 80 quaterdecies ; BOI-RSA-ES-20-20-20 § 150)",
       "plans_qualifiants_age_apres_2017": "Fraction annuelle <= 300 000 EUR : barème après abattement de 50 % (CGI art. 200 A, 3), le cas échéant abattement fixe 150-0 D ter ; prélèvements sociaux sur les revenus du patrimoine (CSS L. 136-6, I-e), sans abattement ; pas de contribution salariale. Fraction > 300 000 EUR : traitements et salaires, PS sur revenus d'activité et contribution salariale 10 % (CSS L. 137-14). Source : BOI-RSA-ES-20-20-20 § 45 et § 50 (version du 21/05/2026)",
-      "plans_qualifiants_age_2016_2017": "AGE du 31/12/2016 au 31/12/2017 : même limite annuelle de 300 000 EUR ; au-delà, salaire (BOI-RSA-ES-20-20-20 § 44)",
-      "plans_qualifiants_age_2015_2016": "AGE du 08/08/2015 au 30/12/2016 : PS revenus du patrimoine, contribution salariale supprimée (BOI-RSA-ES-20-20-20 § 48)",
-      "plans_non_qualifiants": "Traitements et salaires de droit commun, imposés l'année de l'acquisition définitive",
-      "moins_value_cession": "Une cession sous la valeur d'acquisition réduit le gain d'acquisition correspondant, dans la limite de ce montant (CGI art. 80 quaterdecies ; BOI-RSA-ES-20-20-20 § 190)"
+      "plans_qualifiants_age_2016_2017": "AGE du 31/12/2016 au 31/12/2017 : fraction annuelle <= 300 000 EUR au régime des AGE du 08/08/2015 au 30/12/2016 (abattement pour durée de détention ou abattement fixe, PS revenus du patrimoine, pas de contribution salariale ; 2042 C 1TZ, 1UZ, 1VZ) ; au-delà, traitements et salaires avec CSG 9,2 % + CRDS 0,5 % d'activité et contribution salariale 10 % (2042 C 1TT, 1UT) (BOI-RSA-ES-20-20-20 § 44 et § 49)",
+      "plans_qualifiants_age_2015_2016": "AGE du 08/08/2015 au 30/12/2016 : pas de plafond ; barème après abattement pour durée de détention des PV mobilières (CGI art. 150-0 D, 1, durée décomptée depuis l'acquisition définitive) ou abattement fixe 150-0 D ter, sans déduction de 10 % ; PS revenus du patrimoine ; contribution salariale supprimée ; 2042 C 1TZ, 1UZ, 1VZ (BOI-RSA-ES-20-20-20 § 43 et § 48)",
+      "plans_qualifiants_age_avant_08_08_2015": "Actions attribuées depuis le 28/09/2012 sur AGE au plus tard le 07/08/2015 : traitements et salaires de droit commun, CSG 9,2 % + CRDS 0,5 % sur revenus d'activité, contribution salariale 10 % ; 2042 C 1TT, 1UT (BOI-RSA-ES-20-20-20 § 40 et § 47)",
+      "plans_attribues_avant_28_09_2012": "Taux de 30 % (2042 C 3VI) ou, sur option, traitements et salaires (3VJ, 3VK) ; PS revenus du patrimoine ; contribution salariale 10 % si attribution depuis le 16/10/2007 (3VN) (BOI-RSA-ES-20-20-20 § 35 et § 46)",
+      "plans_non_qualifiants": "RSU ou actions gratuites hors conditions des art. L. 225-197-1 et s. C. com. (dont plans étrangers non conformes) : complément de salaire de droit commun, imposé l'année de l'acquisition définitive, avec les salaires (BOI-RSA-ES-20-20-20 § 10)",
+      "moins_value_cession": "Une cession sous la valeur d'acquisition réduit le gain d'acquisition correspondant, avant application des abattements, dans la limite de ce montant, la limite de 300 000 EUR s'appréciant après cette imputation (CGI art. 80 quaterdecies ; BOI-RSA-ES-20-20-20 § 190) ; les moins-values sur d'autres titres ne s'imputent pas sur le gain d'acquisition (brochure IR 2026)"
     },
     "plus_value_cession": {
       "definition": "Prix de cession − valeur à la date d'acquisition définitive",
@@ -31,20 +33,20 @@
     "description": "Options de souscription ou d'achat d'actions",
     "rabais_excedentaire": {
       "definition": "Différence entre prix de marché à l'attribution et prix d'exercice, au-delà de 5%",
-      "imposition": "Salaire à l'acquisition"
+      "imposition": "Salaire, l'année de la levée de l'option (2042 C 1TP, 1UP)"
     },
     "gain_levee": {
-      "plans_pre_2012": "Régime spécifique (barème de faveur selon durée détention)",
-      "plans_post_2012": "Salaire avec régime spécifique — contribution salariale 10%",
+      "plans_pre_2012": "Options attribuées avant le 28/09/2012 : taux proportionnels 18 %, 30 % ou 41 % (2042 C 3VD, 3VI, 3VF) ou, sur option, salaires (3VJ, 3VK) ; contribution salariale 10 % si attribution depuis le 16/10/2007 (3VN)",
+      "plans_post_2012": "Options attribuées à compter du 28/09/2012 : traitements et salaires l'année de la cession des actions (2042 C 1TT, 1UT), CSG 9,2 % + CRDS 0,5 % sur revenus d'activité, contribution salariale 10 % (CSS L. 137-14)",
       "note": "Consulter le plan pour déterminer le régime applicable"
     },
     "contribution_salariale": 0.10,
-    "note_contribution": "Taux 10% sur les gains d'acquisition des plans qualifiants"
+    "note_contribution": "Contribution salariale 10 % (CSS L. 137-14) sur les gains de levée d'options et d'acquisition d'actions gratuites attribuées depuis le 16/10/2007 : options attribuées depuis le 28/09/2012, actions gratuites sur AGE au plus tard le 07/08/2015, fraction > 300 000 EUR des AGE depuis le 31/12/2016, ainsi que les attributions du 16/10/2007 au 27/09/2012 (2042 C 3VN). Pas de contribution sur la fraction <= 300 000 EUR ni pour les AGE du 08/08/2015 au 30/12/2016 (BOI-RSA-ES-20-30 § 30 et § 150, version du 21/05/2026)"
   },
 
   "bspce": {
-    "description": "Bons de Souscription de Parts de Créateur d'Entreprise — réservés aux startups éligibles",
-    "difference_cle_rsu": "Pas de gain d'acquisition imposable comme salaire. Imposition uniquement à la cession.",
+    "description": "Bons de Souscription de Parts de Créateur d'Entreprise : réservés aux startups éligibles",
+    "difference_cle_rsu": "Imposition l'année de la cession des titres. Titres souscrits depuis le 01/01/2025 (LF 2025 art. 92) : gain d'exercice taxé à 12,8 % (2042 C 3PC, option barème en traitements et salaires 1AY, 1BY) ou à 30 % sans option si activité < 3 ans (3PE), gain de cession = PV mobilière de droit commun (3TL) ; PS revenus du patrimoine sur les deux (BOI-RSA-ES-20-40-40 § 60, 70, 80, 130, 150, version du 28/05/2026)",
     "gain_cession": {
       "definition": "Prix de vente des actions − prix d'exercice des BSPCE",
       "anciennete_3_ans_plus": {
@@ -53,25 +55,25 @@
       },
       "anciennete_moins_3_ans": {
         "taux": 0.50,
-        "detail": "30% IR + 20% PS — pénalité forte si départ précoce"
+        "detail": "30% IR + 20% PS, pénalité forte si départ précoce"
       },
       "note_anciennete": "Anciennete du salarié dans la société à la date de cession"
     },
     "conditions_eligibilite_societe": [
-      "SA ou SAS française",
+      "Société par actions passible de l'IS : française ou, depuis le 01/01/2020, siège dans l'UE ou un État de l'EEE conventionné (impôt équivalent à l'IS)",
       "Immatriculée depuis moins de 15 ans",
-      "Non cotée OU cotée sur compartiment dédié aux PME",
+      "Non cotée, ou cotée (marché réglementé ou organisé de l'EEE) avec une capitalisation boursière inférieure à 150 M EUR (attribution possible 3 ans après le franchissement)",
       "Soumise à l'IS",
-      "Capital détenu à 25% minimum par des personnes physiques",
-      "Non issue d'une restructuration (fusion, scission, reprise d'activité)"
+      "Capital détenu à 25 % au moins, de manière continue, par des personnes physiques ou par des personnes morales elles-mêmes détenues à 75 % au moins par des personnes physiques",
+      "BSPCE attribués avant le 08/08/2015 seulement : ne pas avoir été créée dans le cadre d'une concentration, restructuration, extension ou reprise d'activités préexistantes ; conditions modifiées pour les bons attribués depuis le 01/01/2026 (LF 2026, art. 25)"
     ],
     "requalification_salaire": "Si conditions non remplies : requalification en salaires → imposition barème + cotisations sociales, traitement BEAUCOUP plus défavorable"
   },
 
   "pee_perco": {
-    "description": "Plans d'Épargne Entreprise et Plans d'Épargne Retraite Collective — enveloppes collectives",
+    "description": "Plans d'Épargne Entreprise et Plans d'Épargne Retraite Collective : enveloppes collectives",
     "pee": {
-      "abondement_employeur": "Exonéré IR et PS dans les plafonds — AVANTAGE MAJEUR vs versement direct",
+      "abondement_employeur": "Exonéré d'IR dans la limite du plafond, mais soumis à CSG et CRDS : avantage majeur par rapport à un versement direct",
       "plafond_abondement_pee_2025": 3709,
       "plafond_base": "8% × PASS par bénéficiaire (à vérifier annuellement)",
       "blocage": "5 ans sauf cas de déblocage anticipé (mariage, naissance 3e enfant, achat RP, divorce avec enfant à charge, fin contrat travail, surendettement, invalidité, décès, violences conjugales)",
@@ -81,7 +83,7 @@
     "perco_pero": {
       "description": "Équivalent PER collectif",
       "sortie_retraite": "Rente ou capital, même fiscalité que PER individuel",
-      "abondement_employeur": "Exonéré IR et PS dans les plafonds (plafond distinct du PEE)",
+      "abondement_employeur": "Exonéré d'IR dans la limite du plafond (distinct du PEE), mais soumis à CSG et CRDS",
       "plafond_abondement_perco_2025": 7418,
       "plafond_base": "16% × PASS par bénéficiaire"
     },
@@ -93,7 +95,7 @@
     "mecanisme": "Revenu exceptionnel divisé par coefficient (généralement 4), ajouté au revenu ordinaire, impôt supplémentaire multiplié par le même coefficient",
     "coefficient_defaut": 4,
     "avantage_utile_si": "Le revenu exceptionnel ferait franchir une/plusieurs tranches marginales",
-    "inutile_si": "Foyer déjà au TMI maximum (45%) — coefficient n'apporte rien car taux marginal identique quelle que soit la division",
+    "inutile_si": "Foyer déjà au TMI maximum (45%) : coefficient n'apporte rien car taux marginal identique quelle que soit la division",
     "note": "À mentionner systématiquement en cas de vesting RSU important, cession d'entreprise, ou entrée de revenus très supérieure à l'ordinaire"
   }
 }

@@ -7,8 +7,8 @@ Voir `data/niches-fiscales.json` → `distinction_mecanismes`.
 | Mécanisme | S'applique sur | Remboursable si excédent ? | Ordre dans le calcul |
 |-----------|---------------|---------------------------|----------------------|
 | **Déduction** | Revenu imposable (avant calcul) | Non applicable | Étape 3 (RNI) |
-| **Réduction** | Impôt calculé | Non — plancher 0 | Étape 9 (après décote) |
-| **Crédit** | Impôt calculé | Oui — remboursé si > impôt dû | Étape 10 (après réductions) |
+| **Réduction** | Impôt calculé | Non, plancher 0 | Étape 9 (après décote) |
+| **Crédit** | Impôt calculé | Oui, remboursé si > impôt dû | Étape 10 (après réductions) |
 
 **Conséquence pratique** : une déduction de 1 000 € à TMI 30% économise 300 €. Une réduction/crédit de 1 000 € économise 1 000 €. Les dispositifs ne sont donc pas équivalents à montant nominal identique.
 
@@ -22,16 +22,16 @@ Voir `data/niches-fiscales.json` → `distinction_mecanismes`.
 
 ### Pension alimentaire
 
-- Versée à un enfant majeur (case 6EL / 6EM, post-2006) : plafond annuel à vérifier — cases 6GI / 6GJ réservées au cas résiduel d'une décision de justice antérieure à 2006 (formulaire 2042 C, majoration de 25%)
+- Versée à un enfant majeur (case 6EL / 6EM, post-2006) : plafond annuel de 6 855 € par enfant (13 710 € si vous assurez seul l'entretien d'un enfant chargé de famille ou d'un jeune ménage), revenus 2025 ; cases 6GI / 6GJ réservées au cas résiduel d'une décision de justice antérieure à 2006 (formulaire 2042 C, majoration de 25%)
 - Versée à un ascendant dans le besoin : plafond distinct
 - **Condition clé** : preuve du besoin du bénéficiaire et du versement effectif
 - Déduction plafonnée
 
 ### CSG déductible
 
-- 6,8% de la CSG prélevée sur les revenus du capital
-- **Uniquement si option barème progressif** sur les revenus du capital N-1
-- Imputée sur le RNI de N+1
+- 6,8 % de la base (6,8 points sur les 10,6 % ou 9,2 % de CSG), pas 6,8 % du montant de CSG
+- Revenus du capital (RCM, PV mobilières) : **uniquement si option barème progressif** pour les revenus concernés ; revenus fonciers et LMNP : sans condition d'option
+- Déduite du revenu global de l'année de paiement des PS : même année pour les RCM prélevés à la source (ligne 2BH, calcul automatique), N+1 pour les revenus taxés par voie de rôle (case 6DE préremplie)
 - **Zéro sous PFU**
 
 ### Autres déductions notables
@@ -47,14 +47,16 @@ Voir `data/niches-fiscales.json` → `dispositifs_dans_plafond`.
 
 | Dispositif | Taux / mécanisme | Particularité |
 |-----------|------------------|---------------|
-| **Pinel** | Réduction étalée sur 6/9/12 ans | En extinction — dernier millésime 2024 |
+| **Pinel** | Réduction étalée sur 6/9/12 ans | En extinction, investissements réalisés jusqu'au 31/12/2024 |
 | **Denormandie** | Similaire Pinel, ancien avec travaux | Ciblé centres-villes dégradés |
 | **Loc'Avantages** | Selon conventionnement et loyer | Alternative au Pinel |
 | **FCPI / FIP** | 18% à 25% des versements | Plafond versements distinct |
-| **Malraux** | 22% ou 30% des travaux | Hors plafond dans certains cas |
-| **Monuments historiques** | Déduction travaux sans plafond | Conditions strictes (ouverture public) |
+| **Malraux** (opérations engagées avant 2013 seulement) | 22% ou 30% des travaux | Les opérations engagées depuis le 1.1.2013 sont hors plafonnement global |
 | **Investissement forestier** | 18% des versements | Engagement 8 ans minimum |
-| **Corse / outre-mer** (certaines formes) | Variable | Vérifier plafonds spécifiques |
+| **FIP Corse / FIP outre-mer** | 30 % des versements (FIP Corse) | Dans le plafond de 10 000 € |
+| **Outre-mer, SOFICA, Pinel et Denormandie outre-mer** | Variable | Plafond majoré à 18 000 € |
+| **Emploi d'un salarié à domicile** (crédit d'impôt) | 50 % des dépenses | Dans le plafond global (art. 199 sexdecies) |
+| **Frais de garde des jeunes enfants** (crédit d'impôt) | 50 % des dépenses | Dans le plafond global (art. 200 quater B) |
 
 ### Dispositifs hors plafond global
 
@@ -64,8 +66,9 @@ Voir `data/niches-fiscales.json` → `dispositifs_hors_plafond`.
 |-----------|------------------|
 | **Dons associations** | 66% ou 75% (aide aux personnes en difficulté) |
 | **Cotisations syndicales** | 66% |
-| **Girardin industriel outre-mer** | Variable, sous conditions |
-| **Investissement outre-mer** (catégories spécifiques) | Variable |
+| **Malraux** (opérations engagées depuis le 1.1.2013) | 22% ou 30% des travaux |
+| **Monuments historiques** | Déduction des charges (régime de déduction, non plafonné) |
+| **IR-PME JEI, JEU, JEIC, JEIR** | 30 % ou 50 % (art. 199 terdecies-0 A bis et 0 A ter) |
 
 ### Frais de scolarité des enfants (cases 7EA/7EC/7EF)
 
@@ -79,11 +82,11 @@ Réduction forfaitaire par enfant à charge (ou rattaché) **scolarisé au 31 d�
 | Lycée | 7EC | 7ED | 153 € |
 | Enseignement supérieur | 7EF | 7EG | 183 € |
 
-Montants stables (non indexés annuellement). Réduction non remboursable — excédent perdu si impôt < réduction.
+Montants stables (non indexés annuellement). Réduction non remboursable : excédent perdu si impôt < réduction.
 
 **Garde alternée** : réduction divisée par deux entre les deux foyers (cases 7EB / 7ED / 7EG).
 
-**Exclusions** : apprentissage, congé formation, contrat d'études avec l'employeur. La condition BOFiP ("contrat de travail avec l'employeur") vise les formations dont la structure implique un lien contractuel avec un employeur — pas un job étudiant exercé en parallèle d'une formation initiale.
+**Exclusions** : apprentissage, congé formation, contrat d'études avec l'employeur. La condition BOFiP ("contrat de travail avec l'employeur") vise les formations dont la structure implique un lien contractuel avec un employeur, pas un job étudiant exercé en parallèle d'une formation initiale.
 
 **Cas limites à ne pas confondre** :
 - Job étudiant à côté des études → **éligible** (contrat sans lien avec la formation)
@@ -98,7 +101,7 @@ Source : BOFiP BOI-IR-RICI-30 · art. 199 quater F CGI
 
 **Taux standard : 66%** de réduction, dans la limite de 20% du revenu imposable.
 
-**Taux majoré : 75%** pour les dons à des associations d'aide aux personnes en difficulté (Restos du Cœur, Secours Populaire, etc.), dans la limite de **1 000 €** par an. Au-delà : taux 66%.
+**Taux majoré : 75%** pour les dons à des associations d'aide aux personnes en difficulté (Restos du Cœur, Secours Populaire, etc.) et, depuis le 15/02/2025, aux organismes accompagnant les victimes de violence domestique. Revenus 2025 : limite de **1 000 €** pour les dons du 01/01 au 13/10/2025 (case 7UD), portée à **2 000 €** pour les dons à compter du 14/10/2025, ce plafond incluant les dons du 01/01 au 13/10/2025 (case 7UQ ; LF 2026, art. 28). Au-delà : taux 66%. Les dons retenus à 75 % ne comptent pas dans la limite de 20 % du revenu imposable.
 
 **Report** : les dons dépassant le plafond de 20% sont reportables sur les 5 années suivantes.
 
@@ -118,11 +121,14 @@ d'avantage fiscal direct.
 
 - **Taux : 50%** des dépenses éligibles
 - **Plafond général : 12 000 €** par an (donc crédit max 6 000 €)
-- **Majoration** : +1 500 € par enfant à charge ou personne de + 65 ans dans le foyer (plafond max 15 000 €)
+- **Majoration** : +1 500 € par enfant à charge (moitié en résidence alternée), par membre du foyer de plus de 65 ans ou par ascendant de plus de 65 ans éligible à l'APA (plafond max 15 000 €)
+- **Première année d'emploi direct** : plafond porté à 15 000 € (majorations comprises, maximum 18 000 €)
+- **Invalidité** (carte d'invalidité ou CMI invalidité d'un membre du foyer, pension d'invalidité de 3e catégorie, etc.) : plafond 20 000 €, sans majoration
+- **Plafonnement global** : ce crédit d'impôt entre dans le plafond de 10 000 € (art. 200-0 A)
 - **Éligible** : ménage, garde d'enfant à domicile, soutien scolaire, petit bricolage, jardinage, etc.
 - **Entreprise agréée ou emploi direct** avec déclaration URSSAF
 
-**Avance immédiate (depuis 2022)** : possible via CESU+ — l'URSSAF avance le crédit directement, pas d'attente de remboursement.
+**Avance immédiate (depuis 2022)** : possible via CESU+ : l'URSSAF avance le crédit directement, pas d'attente de remboursement.
 
 ### Garde d'enfant hors domicile
 
@@ -134,8 +140,9 @@ d'avantage fiscal direct.
 ### Cotisations syndicales
 
 - **Taux : 66%**
-- **Plafond** : 1% du salaire brut
-- Pour salariés déclarant à l'IR (pas pour les non-imposables)
+- **Plafond** : 1 % des traitements, salaires et pensions (montant net imposable, diminué des cotisations sociales déductibles)
+- **Crédit d'impôt** : remboursé même si le foyer n'est pas imposable ; ouvert aux salariés, fonctionnaires, retraités et demandeurs d'emploi indemnisés (cases 7AC, 7AE, 7AG)
+- Incompatible avec l'option pour les frais réels : les cotisations sont alors comprises dans les frais
 
 ## Plafonnement global des niches fiscales
 
@@ -147,11 +154,11 @@ Voir `data/niches-fiscales.json` → `plafonnement_global`.
 1. Calculer toutes les réductions et crédits éligibles
 2. Distinguer ceux **dans le plafond** vs **hors plafond**
 3. Sommer les "dans le plafond"
-4. Si total > 10 000 € → l'excédent est **perdu** (pas reportable)
+4. Si total > 10 000 € → l'excédent est **perdu** (pas reportable), sauf la fraction de réduction IR-PME reportable sur 5 ans
 
 **Pièges fréquents** :
 - Cumuler Pinel + FCPI + Girardin sans vérifier le plafond → partie perdue
-- Confondre "dans plafond" et "hors plafond" (les dons et l'emploi à domicile sont hors plafond)
+- Confondre "dans plafond" et "hors plafond" : les dons sont hors plafond, mais les crédits d'impôt emploi à domicile et garde d'enfants entrent dans le plafond de 10 000 € (brochure pratique IR 2026, p. 319)
 
 ## Ordre d'application (après impôt brut)
 
@@ -171,7 +178,7 @@ Impôt net final
 
 Tableau rapide :
 - Pinel + FCPI : à additionner → vérifier ≤ 10 000 €
-- Malraux : peut dépasser le plafond selon les cas
+- Malraux : hors plafonnement global pour les opérations engagées depuis le 1.1.2013
 
 ### 2. Privilégier les crédits si non imposable
 

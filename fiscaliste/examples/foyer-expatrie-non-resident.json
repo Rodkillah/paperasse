@@ -16,7 +16,7 @@
   "revenus": {
     "salaires_declarant1": 0,
     "dividendes_bruts": 12000,
-    "_commentaire_dividendes": "Dividendes SAS française — retenue à la source 12,8 % (art. 119 bis 2 CGI), puis régularisation selon convention FR-PT",
+    "_commentaire_dividendes": "Dividendes SAS française : retenue à la source 12,8 % (art. 119 bis 2 CGI), puis régularisation selon convention FR-PT",
     "revenus_fonciers_reels": 9500,
     "_commentaire_foncier": "Revenus fonciers de source française : imposables en France (art. 164 B), convention FR-PT applique la méthode de l'imputation.",
     "plus_values_mobilieres": 0

@@ -10,14 +10,14 @@
     "description": "Régime simplifié pour revenus fonciers non meublés (location nue)",
     "seuil_recettes_brutes": 15000,
     "abattement": 0.30,
-    "note": "Revenus fonciers bruts ≤ 15 000 € → micro-foncier éligible, abattement 30% automatique. Au-delà : régime réel obligatoire. Exclusions : SCI, monument historique, Pinel, Borloo, etc."
+    "note": "Revenus fonciers bruts 2025 du foyer ≤ 15 000 € → micro-foncier éligible, abattement 30 % automatique (case 4BE). Au-delà : régime réel obligatoire. Exclusions : monument historique ou nue-propriété, Loc'Avantages, amortissement (Périssol, Besson neuf, Robien, Borloo neuf), déductions spécifiques (Anah, Borloo ancien, Cosse, Scellier intermédiaire ou ZRR, Robien ZRR), réduction travaux logements touristiques (199 decies EA et F), parts de SCI ou de SCPI détenant de tels biens, et revenus provenant uniquement de parts de SCI à l'IR ou de FPI. Pinel, Duflot, Scellier, Denormandie et Malraux ne font pas obstacle (brochure IR 2026 p. 157 ; BOI-RFPI-DECLA-10)."
   },
 
   "regime_reel_foncier": {
     "description": "Revenus fonciers nets = recettes − charges déductibles",
     "charges_deductibles": [
       "Intérêts d'emprunt (imputables uniquement sur revenus fonciers)",
-      "Travaux (entretien, réparation, amélioration — pas construction ni agrandissement)",
+      "Travaux (entretien, réparation, amélioration ; pas construction ni agrandissement)",
       "Taxe foncière (hors TEOM)",
       "Primes d'assurance",
       "Frais de gestion",
@@ -25,9 +25,9 @@
     ],
     "deficit_foncier": {
       "imputation_revenu_global": 10700,
-      "note_travaux_renovation_energetique": "Plafond temporairement doublé à 21 400 € pour travaux de rénovation énergétique globale (loi climat)",
+      "note_travaux_renovation_energetique": "Limite de 10 700 € rehaussée, sans pouvoir excéder 21 400 €, du montant des dépenses de rénovation énergétique faisant passer le logement d'une classe E, F ou G à A, B, C ou D (devis accepté à compter du 5.11.2022, dépenses payées du 1.1.2023 au 31.12.2025 pour les revenus 2025 ; prorogé jusqu'au 31.12.2027 par la LF 2026, art. 47). Base : CGI art. 156, I-3° ; BOI-RFPI-BASE-30-20",
       "imputation_revenus_fonciers": "Reportable 10 ans au-delà du plafond annuel",
-      "exception_interets": "Les intérêts d'emprunt NE sont JAMAIS imputables sur le revenu global, uniquement sur les revenus fonciers"
+      "exception_interets": "Les intérêts d'emprunt NE sont JAMAIS imputables sur le revenu global, uniquement sur les revenus fonciers ; le revenu brut foncier est réputé les compenser en priorité, seule la fraction du déficit non couverte par ce revenu provient des intérêts (BOI-RFPI-BASE-30-20 § 110)"
     }
   },
 
@@ -38,19 +38,19 @@
     "lmnp_longue_duree": {
       "seuil": 77700,
       "abattement": 0.50,
-      "note": "Location meublée longue durée (bail >9 mois) — inchangé"
+      "note": "Autres locations meublées (hors chambres d'hôtes et meublés de tourisme) : le locataire y élit domicile, alors que le meublé de tourisme est loué à une clientèle de passage à la journée, à la semaine ou au mois. Case 5NI (5OI, 5PI)."
     },
 
     "meuble_tourisme_classe": {
       "seuil": 77700,
       "abattement": 0.50,
-      "note": "Meublés de tourisme classés (catégorie étoilée) — inchangé"
+      "note": "Chambres d'hôtes et meublés de tourisme classés. Case 5NG (5OG, 5PG)."
     },
 
     "meuble_tourisme_non_classe": {
       "seuil": 15000,
       "abattement": 0.30,
-      "note": "Seuil et abattement abaissés par la loi Le Meur. Au-delà de 15 000 € : régime réel obligatoire."
+      "note": "Seuil et abattement abaissés par la loi Le Meur (revenus 2025). Le micro-BIC s'applique si les recettes N-1 ou N-2 ne dépassent pas 15 000 € : régime réel obligatoire après deux années consécutives de dépassement. Case 5NH (5OH, 5PH)."
     }
   },
 
@@ -62,23 +62,24 @@
       "gros_travaux": "Amortissables sur leur durée d'usage"
     },
     "resultat_fiscal": "Recettes − charges − amortissements. Souvent nul ou déficitaire.",
-    "deficit_lmnp": "NON imputable sur le revenu global (contrairement au LMP). Reportable sur les BIC des 10 années suivantes."
+    "deficit_lmnp": "NON imputable sur le revenu global (contrairement au LMP), ni sur les autres BIC non professionnels : imputable uniquement sur les revenus de location meublée non professionnelle des 10 années suivantes (cases 5GA à 5GJ ; brochure pratique IR 2026, p. 175).",
+    "plus_value_cession": "Cessions depuis le 15.2.2025 : prix d'acquisition minoré des amortissements déduits (art. 39 C), y compris avant 2025 (LFI 2025 art. 84, CGI art. 150 VB III ; réponse ministérielle n° 10097, JO AN 24.3.2026). Exceptions : résidences étudiantes, établissements et résidences services pour personnes âgées ou handicapées, soins de longue durée."
   },
 
   "lmp_vs_lmnp": {
     "description": "Bascule en LMP (Loueur Meublé Professionnel)",
     "seuils_cumulatifs": {
       "seuil_recettes": 23000,
-      "condition_revenus": "ET recettes meublées > 50% des autres revenus professionnels du foyer (salaires, BNC, BIC, revenus dirigeants)",
-      "note": "Les DEUX conditions doivent être remplies. Seuil 23 000 € non renouvelable — application dès dépassement."
+      "condition_revenus": "ET recettes meublées > revenus du foyer soumis à l'IR en traitements et salaires (y compris pensions et rentes viagères, rémunérations art. 62), BIC hors location meublée, BA et BNC (art. 155, IV CGI)",
+      "note": "Les DEUX conditions doivent être remplies. Seuil 23 000 € non renouvelable : application dès dépassement."
     },
     "consequences_lmp": {
       "deficits": "Imputables sur le revenu global (contrairement au LMNP)",
       "plus_values": "Régime des plus-values professionnelles avec exonération totale possible après 5 ans d'activité sous conditions de recettes",
-      "cotisations_sociales": "Cotisations TNS sur le bénéfice (SSI) — charge significative vs LMNP",
+      "cotisations_sociales": "Cotisations TNS sur le bénéfice (SSI), charge significative par rapport au LMNP",
       "ifi": "Biens LMP exonérés d'IFI comme biens professionnels (sous conditions)"
     },
-    "bascule_involontaire": "Attention : passage LMP possible en cas de hausse des recettes meublées OU baisse des autres revenus professionnels. À surveiller annuellement."
+    "bascule_involontaire": "Attention : passage LMP possible en cas de hausse des recettes meublées OU de baisse des autres revenus du foyer pris en compte (traitements et salaires, pensions comprises, BIC hors location meublée, BA, BNC), par exemple au passage d'un salaire à une pension plus faible. À surveiller annuellement."
   },
 
   "sci_ir": {

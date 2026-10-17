@@ -107,7 +107,7 @@ Fraction imposable soumise au PAS au taux en vigueur. Peut faire exploser le pr�
 
 ## Formulaires et démarches
 
-- Déclaration annuelle : 2042 — le PAS est pré-rempli depuis 2020
+- Déclaration annuelle : 2042, le PAS est pré-rempli depuis 2020
 - Espace impots.gouv.fr → "Gérer mon prélèvement à la source" : taux, modulation, acomptes, renoncement
 - Attestation de taux : téléchargeable à tout moment dans l'espace particulier
 

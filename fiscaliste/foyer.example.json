@@ -7,7 +7,11 @@
 
   "foyer": {
     "situation": "marie",
-    "_situation_options": ["celibataire", "marie", "pacse", "divorce", "veuf"],
+    "_situation_options": ["celibataire", "divorce", "separe", "marie", "pacse", "veuf", "veuf_annee_deces"],
+    "_commentaire_situation": "veuf : conjoint décédé avant le 1er janvier 2025. Conjoint décédé en 2025 : deux déclarations ; la déclaration commune (du 1er janvier au décès) se calcule avec marie ou pacse, la déclaration individuelle du survivant (après le décès) avec veuf_annee_deces (mêmes parts que le couple, décote des personnes seules)",
+    "parent_isole": false,
+    "_commentaire_parent_isole": "Case T : célibataire, divorcé ou séparé vivant seul, assumant seul la charge d'au moins un enfant (art. 194 II CGI)",
+    "_commentaire_cas_refuses": "Champs de refus lus par calc_ir.py dans cette section foyer : nb_enfants_invalides (refus s'il est supérieur à 0) et les booléens case_l, case_p, case_f, case_w, case_s, case_g (refus s'ils valent true). Si l'un d'eux est renseigné, calc_ir.py refuse le calcul (cas non géré) : calculer avec la fiche 2041 ou le simulateur impots.gouv.fr. Les champs case_* ne figurent pas dans ce modèle : ne les ajouter que pour un foyer concerné",
     "annee_naissance_declarant1": 1985,
     "annee_naissance_declarant2": 1987,
     "nb_enfants_charge": 2,
@@ -26,14 +30,14 @@
     "pensions_declarant2": 0,
 
     "bnc_regime_normal": 0,
-    "_commentaire_bnc": "Case 5QC — BNC professionnels régime normal",
+    "_commentaire_bnc": "Case 5QC : BNC professionnels régime normal",
     "micro_bnc_recettes": 0,
 
     "dividendes_bruts": 5000,
-    "_commentaire_dividendes": "Case 2DC — dividendes avec droit abattement 40% si option barème",
+    "_commentaire_dividendes": "Case 2DC : dividendes avec droit abattement 40% si option barème",
     "interets_rcm": 0,
     "plus_values_mobilieres": 0,
-    "_commentaire_pv_mobi": "Case 3VG — plus-values de cession de titres",
+    "_commentaire_pv_mobi": "Case 3VG : plus-values de cession de titres",
 
     "revenus_fonciers_micro": 0,
     "revenus_fonciers_reels": 0,
@@ -43,8 +47,11 @@
     "_commentaire_lmnp": "Résultat après amortissements, positif seulement",
 
     "crypto_plus_values": 0,
-    "revenus_chomage": 0,
-    "_commentaire_chomage": "Case 1AP (pas 1AJ) — saisir le NET IMPOSABLE; l'abattement 10% s'applique comme pour les salaires (BOI-RSA-BASE-30-50-20)"
+    "rcm_sans_ps_a_la_source": 0,
+    "_commentaire_rcm_sans_ps": "Part de dividendes_bruts + interets_rcm 2025 n'ayant pas supporté les PS lors du versement (payeur établi hors de France, sans formulaire 2778) : PS 18,6 % sur l'avis 2026",
+    "revenus_chomage_declarant1": 0,
+    "revenus_chomage_declarant2": 0,
+    "_commentaire_chomage": "Cases 1AP (déclarant 1) et 1BP (déclarant 2), pas 1AJ : saisir le montant imposable. La déduction de 10 % se calcule pour chaque membre du foyer sur le total de ses salaires et de ses allocations chômage (minimum 509 €, maximum 14 555 € par personne, revenus 2025, BOI-RSA-BASE-30-50-20 § 80 et § 210). Le champ historique revenus_chomage reste accepté pour une déclaration à un seul déclarant ; pour un couple, une valeur non nulle doit être ventilée entre les deux champs."
   },
 
   "deductions": {
@@ -52,7 +59,7 @@
     "per_declarant2": 2000,
     "pension_alimentaire_enfant_majeur": 0,
     "csg_deductible_n1": 0,
-    "_commentaire_csg": "CSG déductible uniquement si option barème en N-1, pas sous PFU"
+    "_commentaire_csg": "Case 6DE : CSG déductible (6,8 %) payée en 2025 par voie de rôle sur les revenus 2024. Sans condition d'option pour les revenus fonciers et le LMNP ; pour les PV et RCM 2024, seulement s'ils ont été imposés au barème (option 2OP sur la déclaration 2025). La CSG des RCM 2025 prélevée à la source se déduit via la ligne 2BH, pas ici."
   },
 
   "options_fiscales": {

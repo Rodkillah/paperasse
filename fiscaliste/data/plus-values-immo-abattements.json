@@ -6,7 +6,7 @@
   },
 
   "regime_general": {
-    "description": "Plus-value immobilière des particuliers — deux grilles distinctes (IR et PS) avec durées différentes",
+    "description": "Plus-value immobilière des particuliers : deux grilles distinctes (IR et PS) avec durées différentes",
     "taux_ir": 0.19,
     "taux_ps": 0.172,
     "taux_total_sans_abattement": 0.362,
@@ -39,7 +39,7 @@
   "exonerations": {
     "residence_principale": "Exonération totale IR + PS à condition d'occuper effectivement le bien à la date de cession (pas de mise en location préalable)",
     "premiere_cession_logement_autre_que_rp": "Exonération sous conditions de remploi (construction/acquisition d'une RP dans les 24 mois), pas de détention d'une RP dans les 4 ans",
-    "expatries": "Exonération partielle pour les non-résidents qui vendent leur ancienne résidence en France",
+    "expatries": "Non-résidents : (1) exonération totale de l'ancienne résidence principale si la nouvelle résidence est dans l'UE ou un État conventionné, si le bien n'a pas été mis à disposition d'un tiers et si la cession intervient au plus tard le 31 décembre de l'année suivant le départ (art. 244 bis A, I) ; (2) à défaut, exonération dans la limite de 150 000 € de plus-value nette pour un seul logement, si 2 ans de domicile fiscal continu en France et cession au plus tard la 10e année suivant le départ, ou sans délai si libre disposition depuis le 1er janvier de l'année précédente (art. 150 U, II, 2°). Les deux exonérations ne se cumulent pas.",
     "petit_prix": "Exonération si prix ≤ 15 000 € (par quote-part si indivision)",
     "duree_detention": "≥ 22 ans pour l'IR, ≥ 30 ans pour les PS"
   },
@@ -47,7 +47,8 @@
   "prix_acquisition_majore": {
     "description": "Le prix d'acquisition peut être majoré pour réduire la PV taxable",
     "frais_acquisition": "7.5% forfaitaire OU frais réels sur justificatifs (notaire, droits enregistrement)",
-    "travaux": "15% forfaitaire si détention ≥ 5 ans, OU travaux réels sur justificatifs (construction, reconstruction, agrandissement, amélioration) - si non déjà déduits des revenus fonciers"
+    "travaux": "15% forfaitaire si détention de plus de 5 ans, OU travaux réels sur justificatifs (construction, reconstruction, agrandissement, amélioration) - si non déjà déduits des revenus fonciers",
+    "minoration_lmnp": "Location meublée non professionnelle : pour les cessions depuis le 15.2.2025, le prix d'acquisition est minoré des amortissements déduits (art. 39 C), sauf résidences étudiantes, établissements et résidences services pour personnes âgées ou handicapées (LFI 2025 art. 84 ; CGI art. 150 VB III)"
   },
 
   "surtaxe_pv_importantes": {
